@@ -1,4 +1,5 @@
 # TODO: Add entry point code here
+import random
 
 class Director:
     """A code template for a person who directs the game. The responsibility of 
@@ -56,7 +57,10 @@ class Director:
         Args:
             self (Director): An instance of Director.
         """
-        if True:
+        print(f'Next card was: {self.dealer.get_curr_card()}')
+        print(f'Your score is: {self.score}')
+        play_again = input('Keep playing? [y/n] ')
+        if (play_again.lower() == 'y'):
             self.keep_playing = True
         else:
             self.keep_playing = False
@@ -64,14 +68,17 @@ class Director:
 class Dealer:
   
   cards = []
-  curr_card
-  prev_card
-
-  def __init__():
+  curr_card = 0
+  prev_card = 0
+  
+  def __init__(self):
     pass
 
   def get_points(self, guess):
     pass
 
   def get_card(self):
+    s
+
+  def get_curr_card(self):
     pass
