@@ -40,8 +40,8 @@ class Director:
         Args:
             self (Director): An instance of Director.
         """
-        self.dealer.get_card
-        predict = input("High or Low (H/L)?: ")
+        print(f'The card is: {self.dealer.get_card()}')
+        return input("High or Low (H/L)?: ")
         
         
     def do_updates(self, answer):
@@ -52,6 +52,8 @@ class Director:
             self (Director): An instance of Director.
         """
         self.points += self.dealer.get_points(answer)
+        self.points = self.points * int(self.points > 0)
+        self.keep_playing = bool(self.points)
 
         
     def do_outputs(self):
@@ -63,8 +65,9 @@ class Director:
         """
         print(f'Next card was: {self.dealer.get_curr_card()}')
         print(f'Your score is: {self.score}')
-        play_again = input('Keep playing? [y/n] ')
-        self.keep_playing = play_again.lower() == 'y'
+        if self.keep_playing:
+          play_again = input('Keep playing? [y/n] ')
+          self.keep_playing = play_again.lower() == 'y'
 
 
 class Dealer:
