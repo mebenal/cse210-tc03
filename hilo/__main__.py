@@ -68,7 +68,7 @@ class Dealer:
     prev_card = 0
 
     def __init__(self):
-      temp = get_card(self)
+      temp = self.get_card(self)
 
     def get_card(self):
         self.prev_card = self.curr_card
