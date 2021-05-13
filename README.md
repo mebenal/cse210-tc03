@@ -11,3 +11,7 @@ Im a Junior in the CIT major, with a minor in ECEN. I love working with database
 and my hobbies include fixing electronics, reading, and being teh support for my friends and family.
 I also enjoy playing games like Minecraft and World of Warcraft when I have free time or to destress.
 
+Jarrod Wise:
+I usually go by JJ, and my major is in data science. I am from Coeur d'Alene Idaho. 
+Some of my favorite hobbies include watching shows and movies, playing games with friends,
+and getting out and meeting new people. This is my third semester here at BYUI.
