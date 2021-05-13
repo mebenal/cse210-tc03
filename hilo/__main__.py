@@ -29,8 +29,8 @@ class Director:
             self (Director): an instance of Director.
         """
         while self.keep_playing:
-            self.get_inputs()
-            self.do_updates()
+            answer = self.get_inputs()
+            self.do_updates(answer)
             self.do_outputs()
 
     def get_inputs(self):
@@ -42,13 +42,15 @@ class Director:
         """
         
         
-    def do_updates(self):
+    def do_updates(self, answer):
         """Updates the important game information for each round of play. In 
         this case, that means updating the score.
 
         Args:
             self (Director): An instance of Director.
         """
+        self.points += self.dealer.get_points(answer)
+
         
     def do_outputs(self):
         """Outputs the important game information for each round of play. In 
@@ -60,10 +62,8 @@ class Director:
         print(f'Next card was: {self.dealer.get_curr_card()}')
         print(f'Your score is: {self.score}')
         play_again = input('Keep playing? [y/n] ')
-        if (play_again.lower() == 'y'):
-            self.keep_playing = True
-        else:
-            self.keep_playing = False
+        self.keep_playing = play_again.lower() == 'y'
+
 
 class Dealer:
   
