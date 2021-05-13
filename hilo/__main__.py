@@ -40,6 +40,8 @@ class Director:
         Args:
             self (Director): An instance of Director.
         """
+        self.dealer.get_card
+        predict = input("High or Low (H/L)?: ")
         
         
     def do_updates(self, answer):
