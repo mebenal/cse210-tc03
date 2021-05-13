@@ -1,4 +1,5 @@
 # TODO: Add entry point code here
+import random
 
 class Director:
     """A code template for a person who directs the game. The responsibility of 
@@ -62,16 +63,17 @@ class Director:
             self.keep_playing = False
 
 class Dealer:
-  
-  cards = []
-  curr_card
-  prev_card
+    cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+    curr_card = 0
+    prev_card = 0
 
-  def __init__():
-    pass
+    def get_card(self):
+        self.prev_card = random.randint(1,13)
+        return self.prev_card
 
-  def get_points(self, guess):
-    pass
-
-  def get_card(self):
-    pass
+    def get_points(self, guess):
+        self.curr_card = self.get_card()
+        if guess.lower() == "h" and self.curr_card > self.prev_card:
+            return 100
+        elif guess.lower() == "l" and self.curr_card < self.prev_card:
+            return -75
