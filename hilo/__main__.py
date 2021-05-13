@@ -29,8 +29,8 @@ class Director:
             self (Director): an instance of Director.
         """
         while self.keep_playing:
-            self.get_inputs()
-            self.do_updates()
+            answer = self.get_inputs()
+            self.do_updates(answer)
             self.do_outputs()
 
     def get_inputs(self):
@@ -40,15 +40,21 @@ class Director:
         Args:
             self (Director): An instance of Director.
         """
+        print(f'The card is: {self.dealer.get_card()}')
+        return input("High or Low (H/L)?: ")
         
         
-    def do_updates(self):
+    def do_updates(self, answer):
         """Updates the important game information for each round of play. In 
         this case, that means updating the score.
 
         Args:
             self (Director): An instance of Director.
         """
+        self.points += self.dealer.get_points(answer)
+        self.points = self.points * int(self.points > 0)
+        self.keep_playing = bool(self.points)
+
         
     def do_outputs(self):
         """Outputs the important game information for each round of play. In 
@@ -57,10 +63,12 @@ class Director:
         Args:
             self (Director): An instance of Director.
         """
-        if True:
-            self.keep_playing = True
-        else:
-            self.keep_playing = False
+        print(f'Next card was: {self.dealer.get_curr_card()}')
+        print(f'Your score is: {self.score}')
+        if self.keep_playing:
+          play_again = input('Keep playing? [y/n] ')
+          self.keep_playing = play_again.lower() == 'y'
+
 
 class Dealer:
     cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
@@ -69,6 +77,7 @@ class Dealer:
 
     def __init__(self):
       temp = self.get_card(self)
+
 
     def get_card(self):
         self.prev_card = self.curr_card
@@ -80,3 +89,4 @@ class Dealer:
             return 100
         elif guess.lower() == "l" and self.curr_card < self.prev_card:
             return -75
+
