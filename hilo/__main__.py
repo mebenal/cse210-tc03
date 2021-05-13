@@ -67,12 +67,15 @@ class Dealer:
     curr_card = 0
     prev_card = 0
 
+    def __init__(self):
+      temp = get_card(self)
+
     def get_card(self):
-        self.prev_card = random.randint(1,13)
-        return self.prev_card
+        self.prev_card = self.curr_card
+        self.curr_card = random.randint(1,13)
+        return self.curr_card
 
     def get_points(self, guess):
-        self.curr_card = self.get_card()
         if guess.lower() == "h" and self.curr_card > self.prev_card:
             return 100
         elif guess.lower() == "l" and self.curr_card < self.prev_card:
