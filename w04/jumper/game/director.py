@@ -29,8 +29,8 @@ class Director:
         self (Director): an instance of Director.
     """
     while self.keep_playing:
-      self.get_inputs()
-      self.do_updates()
+      guess = self.get_inputs()
+      self.do_updates(guess)
       self.do_outputs()
   
   def get_inputs(self):
@@ -39,9 +39,9 @@ class Director:
     Args:
         self (Director): An instance of Director.
     """
-    self.player.updateLife()
+    return self.console.read()
   
-  def do_updates(self):
+  def do_updates(self, guess):
     """Updates the important game information for each round of play. In 
     this case, that means updating the points and determining whether they
     lost the game.
@@ -49,6 +49,9 @@ class Director:
         self (Director): An instance of Director.
         answer (str): Whether the user choose hi or low.
     """
+    isCorrect = self.puzzle.checkGuess(guess)
+    self.player.updateLife(isCorrect)
+
   
   def do_outputs(self):
     """Outputs the important game information for each round of play. In 
