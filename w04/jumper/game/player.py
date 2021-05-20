@@ -2,14 +2,10 @@ class Player:
 
     def __init__(self):
         self.health = 4
-        self.console = Console()
-        self.puzzle = Puzzle()
 
 
-    def updateLife(self):
-        guess = self.console.read("Guess a letter [a-z]: ")
-        check = (self.puzzle.checkGuess(guess))
-        if check == False:
+    def updateLife(self, check):
+        if not check:
             self.health -= 1
         
     def displayParachute(self): 
