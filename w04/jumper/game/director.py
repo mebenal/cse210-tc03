@@ -39,7 +39,7 @@ class Director:
     Args:
         self (Director): An instance of Director.
     """
-    return self.console.read()
+    return self.console.read("Guess a letter [a-z]: ")
   
   def do_updates(self, guess):
     """Updates the important game information for each round of play. In 
@@ -60,5 +60,5 @@ class Director:
     Args:
         self (Director): An instance of Director.
     """
-    self.console.write(self.puzzle.displayCorrect())
+    self.console.write(self.puzzle.display_correct())
     self.console.write(self.player.displayParachute())

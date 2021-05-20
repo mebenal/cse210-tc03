@@ -12,7 +12,7 @@ class Player:
         return self.fourhealth()
         
 
-    def fourhealth():
+    def fourhealth(self):
         return """  
           ___  
          /___\ 
@@ -24,7 +24,7 @@ class Player:
                  
         ^^^^^^^"""
 
-    def threehealth():
+    def threehealth(self):
         return """    
          /___\ 
          \   / 
@@ -35,7 +35,7 @@ class Player:
                  
         ^^^^^^^""" 
 
-    def twohealth():
+    def twohealth(self):
         return """  
          \   / 
           \ / 
@@ -45,7 +45,7 @@ class Player:
                  
         ^^^^^^^"""
 
-    def onehealth():
+    def onehealth(self):
         return """ 
           \ / 
            0 
@@ -54,7 +54,7 @@ class Player:
                  
         ^^^^^^^"""
 
-    def zerohealth():
+    def zerohealth(self):
         return """  
            X
           /|\   

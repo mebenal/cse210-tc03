@@ -22,7 +22,7 @@ class Puzzle:
             return False
     
     def display_correct(self):
-        return self.correct_list.join()
+        return " ".join(self.correct_list)
 
             
     
