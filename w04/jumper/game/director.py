@@ -28,7 +28,8 @@ class Director:
     Args:
         self (Director): an instance of Director.
     """
-    while self.keep_playing:
+    self.do_outputs()
+    while self.keep_playing and not self.puzzle.isWon():
       guess = self.get_inputs()
       self.do_updates(guess)
       self.do_outputs()
@@ -51,6 +52,7 @@ class Director:
     """
     isCorrect = self.puzzle.checkGuess(guess)
     self.player.updateLife(isCorrect)
+    self.keep_playing = bool(self.player.getLife())
 
   
   def do_outputs(self):

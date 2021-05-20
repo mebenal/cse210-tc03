@@ -24,5 +24,8 @@ class Puzzle:
     def display_correct(self):
         return " ".join(self.correct_list)
 
+    def isWon(self):
+        return "_" not in self.correct_list
+
             
     

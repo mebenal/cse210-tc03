@@ -1,3 +1,46 @@
+
+parachutes = [
+"""   
+   X 
+  /|\   
+  / \ 
+        
+^^^^^^^  """,
+"""
+  \ / 
+   0 
+  /|\   
+  / \ 
+         
+^^^^^^^ """,
+""" 
+ \   / 
+  \ / 
+   0 
+  /|\   
+  / \ 
+         
+^^^^^^^ """,
+"""   
+ /___\ 
+ \   / 
+  \ / 
+   0 
+  /|\   
+  / \ 
+         
+^^^^^^^ """,
+""" 
+  ___  
+ /___\ 
+ \   / 
+  \ / 
+   0 
+  /|\   
+  / \ 
+         
+^^^^^^^ """]
+
 class Player:
 
     def __init__(self):
@@ -9,55 +52,10 @@ class Player:
             self.health -= 1
         
     def displayParachute(self): 
-        return self.fourhealth()
+        return parachutes[self.health]
+
+    def getLife(self):
+        return self.health
         
 
-    def fourhealth(self):
-        return """  
-          ___  
-         /___\ 
-         \   / 
-          \ / 
-           0 
-          /|\   
-          / \ 
-                 
-        ^^^^^^^"""
-
-    def threehealth(self):
-        return """    
-         /___\ 
-         \   / 
-          \ / 
-           0 
-          /|\   
-          / \ 
-                 
-        ^^^^^^^""" 
-
-    def twohealth(self):
-        return """  
-         \   / 
-          \ / 
-           0 
-          /|\   
-          / \ 
-                 
-        ^^^^^^^"""
-
-    def onehealth(self):
-        return """ 
-          \ / 
-           0 
-          /|\   
-          / \ 
-                 
-        ^^^^^^^"""
-
-    def zerohealth(self):
-        return """  
-           X
-          /|\   
-          / \ 
-                 
-        ^^^^^^^"""
+    
