@@ -19,8 +19,8 @@ class Code:
             
         return hint
 
-    def _multiple(self, hint, guess):
-        if self.code.count() < guess.count():
+    # def _multiple(self, hint, guess):
+    #     if self.code.count() < guess.count():
             
 
 
