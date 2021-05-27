@@ -14,7 +14,7 @@ class Director:
         self._player = Player()
         self._code = None
         self._hint = Hint()
-        self._keep_playing() = True
+        self._keep_playing = True
 
     def start_game(self):
 
