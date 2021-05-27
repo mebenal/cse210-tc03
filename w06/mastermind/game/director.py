@@ -45,12 +45,15 @@ class Director:
         player = self._roster.getCurrent()
         self._console.write(f"{player.get_name()}'s turn:")
         guess = self._console.read_number("What is your guess?: ")
-        check_guess = _code.checkGuess(guess)
+        check_guess = self._code.checkGuess(guess)
         self.addPlayerHint(player, guess, check_guess)
 
 
     
     def _do_updates(self):
+        
+
+        player = self._roster.get_current()
         
 
 
