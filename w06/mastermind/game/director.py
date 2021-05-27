@@ -11,8 +11,7 @@ class Director:
 
         self._roster = Roster()
         self._console = Console()
-        self._player = Player()
-        self._code = None
+        self._code = Code()
         self._hint = Hint()
         self._keep_playing = True
 
@@ -31,32 +30,49 @@ class Director:
 
         for n in range(2):
             name = self._console.read(f"Enter a name for player {n + 1}: ")
-            player = Player(name)
-            self._roster.add_player(player)
-            self.addPlayerHint(player.getName(), player.getGuess(), '0000')
+            self._roster.add_player(Player(name))
+            self._player = self._roster.getCurrent()
+            self._hint.addPlayerHint(self._player.getName(), self._player.getGuess(), '0000')
         
+        self._roster.next_player()
+        self._player = self._roster.getCurrent()
         hint = self._hint.displayHint()
         self._console.write(hint)
+        self._hint.resetHint()
     
     def _get_inputs(self):
 
         
         
-        player = self._roster.getCurrent()
-        self._console.write(f"{player.get_name()}'s turn:")
+    
+        self._console.write(f"{self._player.getName()}'s turn:")
         guess = self._console.read_number("What is your guess?: ")
-        check_guess = self._code.checkGuess(guess)
-        self.addPlayerHint(player, guess, check_guess)
+        self._player.setGuess(str(guess))
+        
+        
 
 
     
     def _do_updates(self):
         
 
-        player = self._roster.get_current()
         
+        self._player.setCheckedGuess(self._code.checkGuess(self._player.getGuess()))
+        for i in self._roster.players:
+            self._hint.addPlayerHint(i.getName(), i.getGuess(), i.getCheckedGuess())
+        self._keep_playing = self._code.isWon(self._player.getGuess())
+
 
 
     def _do_outputs(self):
+
+
+        self._console.write(self._hint.displayHint())
+        if not self._keep_playing:
+            self._console.write(f"{self._player.getName()} won!")
+        self._hint.resetHint()
+
+        self._roster.next_player()
+        self._player = self._roster.getCurrent()
 
 

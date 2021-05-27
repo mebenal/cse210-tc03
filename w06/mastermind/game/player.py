@@ -16,8 +16,9 @@ class Player:
         """
         self._name = name
         self._guess = '----'
+        self._checkedGuess = '****'
         
-    def get_guess(self):
+    def getGuess(self):
         """Returns the player's last move (an instance of Move). If the player 
         hasn't moved yet this method returns None.
 
@@ -26,7 +27,7 @@ class Player:
         """
         return self._guess
 
-    def get_name(self):
+    def getName(self):
         """Returns the player's name.
 
         Args:
@@ -34,7 +35,7 @@ class Player:
         """
         return self._name
 
-    def set_guess(self, guess):
+    def setGuess(self, guess):
         """Sets the player's last move to the given instance of Move.
 
         Args:
@@ -42,3 +43,10 @@ class Player:
             move (Move): an instance of Move
         """
         self._guess = guess
+
+    def getCheckedGuess(self):
+        return self._checkedGuess
+
+
+    def setCheckedGuess(self, checkedGuess):
+        self._checkedGuess = checkedGuess

@@ -7,7 +7,7 @@ class Code:
         self._code = str(random.randint(1000, 9999))
         
 
-    def check_guess(self, guess):
+    def checkGuess(self, guess):
         hint = ""
         for i in range(len(guess)):
             if guess[i] == self._code[i]:
@@ -18,6 +18,9 @@ class Code:
                 hint += "0"
             
         return hint
+
+    def isWon(self, guess):
+        return not self._code == guess
 
     # def _multiple(self, hint, guess):
     #     if self.code.count() < guess.count():
