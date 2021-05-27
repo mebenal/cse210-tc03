@@ -21,14 +21,3 @@ class Code:
 
     # def _multiple(self, hint, guess):
     #     if self.code.count() < guess.count():
-            
-
-
-
-        
-
-
-bob = Code()
-
-print(bob.check_guess("4594"))
-print(bob._code)
