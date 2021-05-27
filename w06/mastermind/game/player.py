@@ -1,52 +1,52 @@
 class Player:
-    """A person taking part in a game. The responsibility of Player is to keep track of their identity and last move.
-    
-    Stereotype: 
-        Information Holder
+  """A person taking part in a game. The responsibility of Player is to keep track of their identity and last move.
+  
+  Stereotype: 
+    Information Holder
 
-    Attributes:
-        _name (string): The player's name.
-        _move (Move): The player's last move.
+  Attributes:
+    _name (string): The player's name.
+    _move (Move): The player's last move.
+  """
+  def __init__(self, name):
+    """The class constructor.
+  
+    Args:
+      self (Player): an instance of Player.
     """
-    def __init__(self, name):
-        """The class constructor.
+    self._name = name
+    self._guess = '----'
+    self._checkedGuess = '****'
         
-        Args:
-            self (Player): an instance of Player.
-        """
-        self._name = name
-        self._guess = '----'
-        self._checkedGuess = '****'
-        
-    def getGuess(self):
-        """Returns the player's last move (an instance of Move). If the player 
-        hasn't moved yet this method returns None.
+  def get_guess(self):
+    """Returns the player's last move (an instance of Move). If the player 
+    hasn't moved yet this method returns None.
 
-        Args:
-            self (Player): an instance of Player.
-        """
-        return self._guess
+    Args:
+      self (Player): an instance of Player.
+    """
+    return self._guess
 
-    def getName(self):
-        """Returns the player's name.
+  def get_name(self):
+    """Returns the player's name.
 
-        Args:
-            self (Player): an instance of Player.
-        """
-        return self._name
+    Args:
+      self (Player): an instance of Player.
+    """
+    return self._name
 
-    def setGuess(self, guess):
-        """Sets the player's last move to the given instance of Move.
+  def set_guess(self, guess):
+    """Sets the player's last move to the given instance of Move.
 
-        Args:
-            self (Player): an instance of Player.
-            move (Move): an instance of Move
-        """
-        self._guess = guess
+    Args:
+      self (Player): an instance of Player.
+      move (Move): an instance of Move
+    """
+    self._guess = guess
 
-    def getCheckedGuess(self):
-        return self._checkedGuess
+  def get_checked_guess(self):
+    return self._checkedGuess
 
 
-    def setCheckedGuess(self, checkedGuess):
-        self._checkedGuess = checkedGuess
+  def set_checked_guess(self, checkedGuess):
+    self._checkedGuess = checkedGuess
