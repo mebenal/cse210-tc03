@@ -3,13 +3,18 @@ from game.word import Word
 
 class Buffer(Actor):
 
+    def __init__(self):
+        self._prompt = "-Buffer: "
+        self._player = ""
 
-    def _player_input(self, player_input):
-        return input(player_input)
 
+    def _player_input(self):
+        self._prompt
+        self._player = input()
+        return self._player
 
     
-    def check_word(self, string):
+    def check_word(self):
         if self._word == self._player_input:
             return True 
         
@@ -24,4 +29,4 @@ class Buffer(Actor):
 
 
     def reset(self):
-        return self._player_input = "-Buffer: "
+        return self._player = ""
