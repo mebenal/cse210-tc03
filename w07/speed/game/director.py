@@ -26,7 +26,7 @@ class Director:
         Args:
             self (Director): an instance of Director.
         """
-        self._words = [Word() for i in range(constants.STARTING_WORDS)]
+        self._words = [Word(i*3) for i in range(constants.STARTING_WORDS)]
         self._input_service = input_service
         self._keep_playing = True
         self._output_service = output_service
@@ -56,6 +56,7 @@ class Director:
         self._last_letter = self._input_service.get_letter()
         for word in self._words:
           word.move_next()
+        self._buffer.update_buffer()
 
     def _do_updates(self):
         """Updates the important game information for each round of play. In 
@@ -64,10 +65,11 @@ class Director:
         Args:
             self (Director): An instance of Director.
         """
-        if (self._last_letter == '*'):
-          self._handle_word_reset()
+        if (self._last_letter == "*"):
+          self._handle_buffer_reset()
         else:
-          self._buffer.set_player_input(f'${self._buffer.get_player_input()}${self._last_letter}')
+          self._buffer.set_player_input(f'{self._buffer.get_player_input()}{self._last_letter}')
+        self._handle_word_reset()
         
     def _do_outputs(self):
         """Outputs the important game information for each round of play. In 
@@ -83,7 +85,7 @@ class Director:
         self._output_service.draw_actor(self._buffer)
         self._output_service.flush_buffer()
 
-    def _handle_word_reset(self):
+    def _handle_buffer_reset(self):
         """Handles collisions between the snake's head and the food. Grows the 
         snake, updates the score and moves the food if there is one.
 
@@ -95,3 +97,8 @@ class Director:
             word.reset_word()
             self._score.add_points(len(word.get_word()))
         self._buffer.reset()
+
+    def _handle_word_reset(self):
+      for word in self._words:
+        if word.get_position().get_x() == 1:
+          word.reset_word()

@@ -1,5 +1,5 @@
 from game.actor import Actor
-from game.constants import constants
+from game import constants
 from game.point import Point
 
 class Buffer(Actor):
@@ -7,7 +7,7 @@ class Buffer(Actor):
     def __init__(self):
         super().__init__()
         self.set_text("Buffer:")
-        self.set_position(Point(0, constants.MAX_Y))
+        self.set_position(Point(1, constants.MAX_Y))
         self._player_input = ""
 
 
@@ -29,6 +29,7 @@ class Buffer(Actor):
 
     def reset(self):
         self._player_input = ""
+        self.update_buffer()
 
     def update_buffer(self):
-        self.set_text("Buffer: " + self.set_player_input)
+        self.set_text("Buffer: " + self.get_player_input())
