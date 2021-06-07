@@ -1,22 +1,21 @@
 from game.actor import Actor
-from game.word import Word
+from game import constants
+from game import Point
 
 class Buffer(Actor):
 
     def __init__(self):
-        self._prompt = "-Buffer: "
-        self._player = ""
+        super().__init__()
+        self.set_text("Buffer:")
+        self.set_position(Point(0, constants.MAX_Y))
+        self._player_input = ""
 
-
-    def _player_input(self):
-        self._prompt
-        self._player = input()
-        return self._player
 
     
-    def check_word(self):
-        if self._word == self._player_input:
+    def check_word(self, string):
+        if string == self._player_input:
             return True 
+        return False
         
 
 
@@ -29,4 +28,7 @@ class Buffer(Actor):
 
 
     def reset(self):
-        return self._player = ""
+        self._player_input = ""
+
+    def update_buffer(self):
+        self.set_text("Buffer: " + self.set_player_input)
