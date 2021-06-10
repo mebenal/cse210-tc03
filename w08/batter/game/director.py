@@ -25,7 +25,7 @@ class Director:
         
     def start_game(self):
         """Starts the game loop to control the sequence of play."""
-        while True:
+        while self._cast["ball"][0].get_position().get_y() < constants.MAX_Y - 1:
             self._cue_action("input")
             self._cue_action("update")
             self._cue_action("output")

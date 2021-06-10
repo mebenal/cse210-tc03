@@ -15,11 +15,12 @@ class HandleCollisionsAction(Action):
         Args:
             cast (dict): The game actors {key: tag, value: list}.
         """
-        marquee = cast["ball"][0] # there's only one
-        robot = cast["paddle"][0] # there's only one
-        artifacts = cast["brick"]
-        marquee.set_text("")
-        for artifact in artifacts:
-            if robot.get_position().equals(artifact.get_position()):
-                description = artifact.get_description()
-                marquee.set_text(description) 
+        ball = cast["ball"][0] # there's only one
+        paddle = cast["paddle"][0] # there's only one
+        bricks = cast["brick"]
+        for brick in bricks:
+            if ball.get_position().equals(brick.get_position()):
+              bricks.remove(brick)
+              ball.set_velocity(ball.get_velocity().reverse_y())
+        if ball.get_position().get_x() in range(paddle.get_position().get_x(),paddle.get_position().get_x()+8) and ball.get_position().get_y() == constants.MAX_Y - 2:
+          ball.set_velocity(ball.get_velocity().reverse_y())
