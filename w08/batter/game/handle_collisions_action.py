@@ -1,4 +1,5 @@
 import random
+import math
 from game import constants
 from game.action import Action
 
@@ -8,6 +9,8 @@ class HandleCollisionsAction(Action):
     Stereotype:
         Controller
     """
+    def __init__(self,score):
+      self._score = score
 
     def execute(self, cast):
         """Executes the action using the given actors.
@@ -22,5 +25,6 @@ class HandleCollisionsAction(Action):
             if ball.get_position().equals(brick.get_position()):
               bricks.remove(brick)
               ball.set_velocity(ball.get_velocity().reverse_y())
-        if ball.get_position().get_x() in range(paddle.get_position().get_x(),paddle.get_position().get_x()+8) and ball.get_position().get_y() == constants.MAX_Y - 2:
+              self._score.add_points(1)
+        if math.trunc(ball.get_position().get_x()) in range(paddle.get_position().get_x()-1,paddle.get_position().get_x()+12) and math.trunc(ball.get_position().get_y()) == constants.MAX_Y - 1:
           ball.set_velocity(ball.get_velocity().reverse_y())

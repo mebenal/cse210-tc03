@@ -1,3 +1,4 @@
+import math
 class Point:
     """Represents distance from an origin (0, 0).
 
@@ -41,7 +42,7 @@ class Point:
         Returns: 
             boolean: True if both x and y are equal; false if otherwise.
         """
-        return self._x == other.get_x() and self._y == other.get_y()
+        return math.trunc(self._x) == other.get_x() and math.trunc(self._y) == other.get_y()
 
     def get_x(self):
         """Gets the horizontal distance.

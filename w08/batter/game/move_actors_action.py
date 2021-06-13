@@ -1,3 +1,4 @@
+import math
 from game import constants
 from game.action import Action
 from game.point import Point
@@ -39,8 +40,13 @@ class MoveActorsAction(Action):
         y1 = position.get_y()
         x2 = velocity.get_x()
         y2 = velocity.get_y()
-        x = 1 + (x1 + x2 - 1) % (constants.MAX_X - 1)
-        y = 1 + (y1 + y2 - 1) % (constants.MAX_Y - 1)
+        if math.trunc(x1) == 0 and x2 < 0 or math.trunc(x1) == constants.MAX_X and x2 > 0:
+          velocity = velocity.reverse_x()
+        if math.trunc(y1) == 0 and y2 < 0:
+          velocity = velocity.reverse_y()
+        actor.set_velocity(velocity)
+        x = (x1 + x2)
+        y = (y1 + y2)
         position = Point(x, y)
         # if constants.MAX_X - 1 == position:
         #     x = ball.reverse_x()

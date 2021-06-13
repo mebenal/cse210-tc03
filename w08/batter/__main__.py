@@ -1,8 +1,10 @@
 import random
+import math
 from game import constants
 from game.director import Director
 from game.actor import Actor
 from game.point import Point
+from game.score import Score
 from game.control_actors_action import ControlActorsAction
 from game.draw_actors_action import DrawActorsAction
 from game.handle_collisions_action import HandleCollisionsAction
@@ -20,6 +22,8 @@ def main(screen):
     y = int(constants.MAX_Y - 1)
     position = Point(x, y)
     paddle = Actor()
+    score = Score()
+    cast["score"] = [score]
     paddle.set_text("===========")
     paddle.set_position(position)
     cast["paddle"] = [paddle]
@@ -36,7 +40,7 @@ def main(screen):
     x = int(constants.MAX_X / 2)
     y = int(constants.MAX_Y / 2)
     position = Point(x, y)
-    velocity = Point(1, -1)
+    velocity = Point(1*math.cos(90), -1*math.sin(90))
     #velocity = Point(0, 0)
     ball = Actor()
     ball.set_text("@")
@@ -51,7 +55,7 @@ def main(screen):
     output_service = OutputService(screen)
     control_actors_action = ControlActorsAction(input_service)
     move_actors_action = MoveActorsAction()
-    handle_collisions_acition = HandleCollisionsAction()
+    handle_collisions_acition = HandleCollisionsAction(score)
     draw_actors_action = DrawActorsAction(output_service)
     
     script["input"] = [control_actors_action]

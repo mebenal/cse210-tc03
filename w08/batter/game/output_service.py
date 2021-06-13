@@ -1,4 +1,5 @@
 import sys
+import math
 from game import constants
 from asciimatics.widgets import Frame
 
@@ -34,8 +35,8 @@ class OutputService:
         """ 
         text = actor.get_text()
         position = actor.get_position()
-        x = position.get_x()
-        y = position.get_y()
+        x = math.trunc(position.get_x())
+        y = math.trunc(position.get_y())
         self._screen.print_at(text, x, y, 7) # WHITE
 
     def draw_actors(self, actors):
