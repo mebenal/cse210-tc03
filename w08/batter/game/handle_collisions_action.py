@@ -27,4 +27,9 @@ class HandleCollisionsAction(Action):
               ball.set_velocity(ball.get_velocity().reverse_y())
               self._score.add_points(1)
         if math.trunc(ball.get_position().get_x()) in range(paddle.get_position().get_x()-1,paddle.get_position().get_x()+12) and math.trunc(ball.get_position().get_y()) == constants.MAX_Y - 1:
-          ball.set_velocity(ball.get_velocity().reverse_y())
+          choice = random.randint(1,2)
+          if choice == 1:
+            ball.set_velocity(ball.get_velocity().reverse_y())
+          elif choice == 2:
+            ball.set_velocity(ball.get_velocity().reverse_y())
+            ball.set_velocity(ball.get_velocity().reverse_x())
