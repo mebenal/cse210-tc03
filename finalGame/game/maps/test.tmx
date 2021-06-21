@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.7.0" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="1">
+ <tileset firstgid="1" source="../tilesets/overworld.tsx"/>
+ <layer id="3" name="background" width="30" height="30">
+  <data encoding="base64" compression="zlib">
+   eJxjYMAPxIE4FIjzoGxqYWIAyN5cGtmLS94BiCMJqCEHryFgJsivYWhiMnTwL8xeWagbpelsLzXDmBh7aYkHwt41JKjVg+KRYu9AhfOovaP2juJRPIpH8SgexUMJAwCgdlem
+  </data>
+ </layer>
+ <layer id="6" name="path" width="30" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztzcENABAQRNHtifLQA3pAmaYCB4k9yH/JP8xpzADgnaDiYf8uqayK829VTXXn36GmWs6/AADgzgacfwXx
+  </data>
+ </layer>
+ <layer id="1" name="collision" width="30" height="30">
+  <data encoding="base64" compression="zlib">
+   eJzt1clKw0Acx/GJuEEVb6KWHhIvKh60oMblqnVfrorrM7g8g/sbuB/bk8tzqG/gQX0DD+rBb8hIh5ApgcwgSP/wYTLD0B8zyZ8WhBAFqSTHorLWKuxUkOWgRqND2TuOfsVEitykZwoy86hHAxqRTZFbjOTWoleqU9ZzIrybrDJPk1uK5LaJ8rtW1zNoQrOh3Og9B7nFmPWcXO8T4bvNp8yN3nO7iP+mlkX4XlUrKXJt9oqpmsSUZj6MEfk8ijGDuatY08znsSCfF7FkMPev6hgnOJXzRzzhWdkzgEEMwTeUe4Vr3Mj5K97wruyZxgxmMWcoN1qf+MK3sraODWxiy1JuXG1jB7vYM/SbnfxxuU44BuJqHwc4xJGhXJ8szwlHX5N7hnNc4NJQrifP61Y47y3ucI8HQ7muPK9X4bw2+sh3ytktmlwbfRTcbRdjN3o0e/5THyUpG32UpH776EWY66MkFfRRhu/gQ5jro2pVK2n9AIrpPVk=
+  </data>
+ </layer>
+ <layer id="5" name="foreground" width="30" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztzTkSAWEQhuF/Qsq+pCSWU+AOuIE9JbEcgNAlnMFyBssdcAdk3lIdTIlnWqDfqqeqO/qcsyzrH4og6vvHmMidREruNDIB7hZQ9P1LrOQuoSx3BdUAd39VB1305K+hjkbIu1PMMJe/iRbaIe9+N8AQI+VdrbbYYY+D4u4RJ5xxUdzt44ob7oq7CzzwxEtxd42Y51wcCU9vd4MscsjrzVqWZX16AzDJFsQ=
+  </data>
+ </layer>
+</map>

@@ -1,23 +1,29 @@
 import random
 import math
+import arcade
+import os
 from game import constants
+from game.test import Test
 from game.director import Director
 from game.actor import Actor
 from game.point import Point
 from game.score import Score
+from game.map import Map
 from game.control_actors_action import ControlActorsAction
 from game.draw_actors_action import DrawActorsAction
 from game.handle_collisions_action import HandleCollisionsAction
 from game.move_actors_action import MoveActorsAction
 from game.input_service import InputService
 from game.output_service import OutputService
-from asciimatics.screen import Screen 
 
-def main(screen):
-
+def main():
     # create the cast {key: tag, value: list}
     cast = {}
-
+    map = Map()
+    test = Test(map)
+    test.setup()
+    arcade.run()
+    return
     x = int(constants.MAX_X / 2)
     y = int(constants.MAX_Y - 1)
     position = Point(x, y)
@@ -51,7 +57,7 @@ def main(screen):
     # create the script {key: tag, value: list}
     script = {}
 
-    input_service = InputService(screen)
+    input_service = InputService("screen")
     output_service = OutputService(screen)
     control_actors_action = ControlActorsAction(input_service)
     move_actors_action = MoveActorsAction()
@@ -63,7 +69,9 @@ def main(screen):
     script["output"] = [draw_actors_action]
 
     # start the game
-    director = Director(cast, script)
-    director.start_game()
+    director = Director(cast, script, input_service)
+    director.setup()
+    director.run()
 
-Screen.wrapper(main)
+if __name__ == "__main__":
+    main()
