@@ -9,11 +9,11 @@ class Map:
     self._width = 0
     self._height = 0
     self._layers = { 'background' : [ arcade.SpriteList(), True  ],
-                     'path' :       [ arcade.SpriteList(), True  ],
-                     'player' :     [ arcade.SpriteList(), False ],
-                     'enemy' :      [ arcade.SpriteList(), False ],
-                     'item' :       [ arcade.SpriteList(), True  ],
-                     'collision' :  [ arcade.SpriteList(), True  ],
+                     'path'       : [ arcade.SpriteList(), True  ],
+                     'player'     : [ arcade.SpriteList(), False ],
+                     'enemy'      : [ arcade.SpriteList(), False ],
+                     'item'       : [ arcade.SpriteList(), True  ],
+                     'collision'  : [ arcade.SpriteList(), True  ],
                      'foreground' : [ arcade.SpriteList(), True  ] }
     self._set_layers()
 

@@ -29,6 +29,7 @@ class InputService:
       player.change_y = -constants.PLAYER_MOVEMENT_SPEED
     else:
       player.change_y = 0
+
     if any(item in [arcade.key.LEFT, arcade.key.A] for item in self._keys):
       player.change_x = -constants.PLAYER_MOVEMENT_SPEED
     elif any(item in [arcade.key.RIGHT, arcade.key.D] for item in self._keys):
