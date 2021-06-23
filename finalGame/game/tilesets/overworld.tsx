@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset version="1.5" tiledversion="1.7.0" name="test1" tilewidth="16" tileheight="16" tilecount="378" columns="21">
- <image source="../../../../../../Downloads/overworld.png" width="336" height="288"/>
+ <image source="../images/overworld.png" width="336" height="288"/>
  <tile id="0">
   <objectgroup draworder="index" id="2">
    <object id="2" x="0" y="0">
@@ -447,6 +447,20 @@
    </object>
   </objectgroup>
  </tile>
+ <tile id="171">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0">
+    <polygon points="0,0 16,0 16,16 0,16"/>
+   </object>
+  </objectgroup>
+ </tile>
+ <tile id="172">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0">
+    <polygon points="0,0 16,0 16,16 0,16"/>
+   </object>
+  </objectgroup>
+ </tile>
  <tile id="176">
   <objectgroup draworder="index" id="2">
    <object id="1" x="2" y="0">
@@ -474,6 +488,12 @@
     <polygon points="0,0 1,0 1,-1 2,-1 2,-2 0,-2"/>
    </object>
   </objectgroup>
+ </tile>
+ <tile id="189">
+  <animation>
+   <frame tileid="171" duration="1000"/>
+   <frame tileid="172" duration="1000"/>
+  </animation>
  </tile>
  <tile id="207">
   <objectgroup draworder="index" id="2">

@@ -1,8 +1,8 @@
 import random
-from game.actor import Actor
+from game.player import Player
 from game.point import Point
 
-class Score(Actor):
+class Score(Player):
     """Points earned. The responsibility of Score is to keep track of the player's points.
 
     Stereotype:
