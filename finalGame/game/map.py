@@ -23,6 +23,7 @@ class Map:
     for key, value in self._layers.items():
       self._layers[key][0] = arcade.tilemap.process_layer( map_object=self._map_list[self._curr_map],
                                                            layer_name=key,
+                                                           hit_box_algorithm="Simple",
                                                            scaling=constants.TILE_SCALING,
                                                            use_spatial_hash=value[1] )
 
@@ -32,6 +33,9 @@ class Map:
 
   def get_layers(self):
     return {k:v[0] for (k,v) in self._layers.items()}
+
+  def get_layer(self, layer):
+    return self._layers[layer][0]
 
   def get_map_size(self):
     return { "width"  : self._width, 

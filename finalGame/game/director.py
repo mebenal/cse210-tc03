@@ -1,41 +1,34 @@
-from time import sleep
+import arcade
 from game import constants
 
-class Director:
-    """A code template for a person who directs the game. The responsibility of 
-    this class of objects is to control the sequence of play.
+class Director(arcade.Window):
+  def __init__(self):
+    super().__init__(constants.SCREEN_WIDTH, constants.SCREEN_HEIGHT, constants.SCREEN_TITLE)
+    self._cast = None
+    self._script = None
+    self._input_service = None
+
+  def setup(self, cast, script, input_service):
+    self._cast = cast
+    self._script = script
+    self._input_service = input_service       
+
+  def on_draw(self):
+    arcade.start_render()
+    self._cue_action('output')
+
+  def on_key_press(self, symbol, modifiers):
+    self._input_service.set_key(symbol, modifiers)
+    self._cue_action('input')
+
+  def on_key_release(self, symbol, modifiers):
+    self._input_service.remove_key(symbol, modifiers)
+    self._cue_action('input')
+
+  def on_update(self, delta_time):
+    self._cue_action('update')
+
     
-    Stereotype:
-        Controller
-
-    Attributes:
-        _cast (dictionary): The game actors {key: name, value: object}
-        _script (dictionary): The game actions {key: tag, value: object}
-    """
-
-    def __init__(self, cast, script):
-        """The class constructor.
-        
-        Args:
-            cast (dict): The game actors {key: tag, value: list}.
-            script (dict): The game actions {key: tag, value: list}.
-        """
-        self._cast = cast
-        self._script = script
-        
-    def start_game(self):
-        """Starts the game loop to control the sequence of play."""
-        while self._cast["ball"][0].get_position().get_y() < constants.MAX_Y and len(self._cast['brick']) > 0:
-            self._cue_action("input")
-            self._cue_action("update")
-            self._cue_action("output")
-            sleep(constants.FRAME_LENGTH)
-
-    def _cue_action(self, tag):
-        """Executes the actions with the given tag.
-        
-        Args:
-            tag (string): The given tag.
-        """ 
-        for action in self._script[tag]:
-            action.execute(self._cast)
+  def _cue_action(self, tag):
+    for action in self._script[tag]:
+      action.execute(self._cast)
