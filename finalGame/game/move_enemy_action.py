@@ -1,4 +1,3 @@
-from finalGame.game import enemy
 from game import constants
 from game.action import Action
 from game.enemy import Enemy
@@ -32,7 +31,7 @@ class MoveEnemyAction(Action):
     """
     for enemy in cast['enemies']:
 
-      if arcade.Sprite.get_distance_between_sprites(cast['player'],enemy) > 10:
+      if arcade.get_distance_between_sprites(cast['player'], enemy) > 100:
         enemy.set_move_behavior(0)
       else:
         enemy.set_move_behavior(1)
