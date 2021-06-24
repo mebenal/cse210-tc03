@@ -9,4 +9,11 @@
    <frame tileid="1" duration="250"/>
   </animation>
  </tile>
+ <tile id="1">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="2" y="16">
+    <polygon points="0,0 0,-16 13,-16 13,0"/>
+   </object>
+  </objectgroup>
+ </tile>
 </tileset>

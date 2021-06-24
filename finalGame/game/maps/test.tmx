@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.0" orientation="orthogonal" renderorder="right-down" width="30" height="29" tilewidth="16" tileheight="16" infinite="0" nextlayerid="10" nextobjectid="1">
+<map version="1.5" tiledversion="1.7.0" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="10" nextobjectid="1">
  <tileset firstgid="1" source="../tilesets/overworld.tsx"/>
  <tileset firstgid="379" source="../tilesets/players.tsx"/>
  <tileset firstgid="499" source="../tilesets/weapons.tsx"/>
- <layer id="3" name="background" width="30" height="29">
+ <layer id="3" name="background" width="30" height="30">
   <data encoding="base64" compression="zlib">
-   eJxjYMAPxIE4FIjzoGxqYWIAyN5cGtmLS94BiCMJqCEHryFgJsivYWhiMnTwL8xeWagbpelsLzXDmBh7aYkHwt41JKjVg+KRYu9AhfOovaP2juJRPIpH8SgexeRgACSiVPQ=
+   eJxjYMAPxIE4FIjzoGxqYWIAyN5cGtmLS94BiCMJqCEHryFgJsivYWhiMnTwL8xeWagbpelsLzXDmBh7aYkHwt41JKjVg+KRYu9AhfOovaP2juJRPIpH8SgexUMJAwCgdlem
   </data>
  </layer>
- <layer id="6" name="path" width="30" height="29">
+ <layer id="6" name="path" width="30" height="30">
   <data encoding="base64" compression="zlib">
-   eJztzcENABAQRNHtifLQA3pAmaYCN5uQ/5J/mNOYAcA9QcXD/l1SWRXn36qa6s6/Q021nH8BAHjdBtNaBfE=
+   eJxjYGBg2McwcsBI8usoGAWDARgDsQke/nAHNUBcC8R1dLZ3IhBPAuLJdLZ3GRAvB+IVdLZ3FIyCUTAKRsEoGAXkAQDIUwdt
   </data>
  </layer>
- <layer id="1" name="collision" width="30" height="29">
+ <layer id="1" name="collision" width="30" height="30">
   <data encoding="base64" compression="zlib">
-   eJzl1jlOw0AYhuExuxQQHYJEFAkNqwSRALO0EPalBbGegeUM7DdgL5OKpcwZgBtQADegAArekSfKyIoTB48p4Jce2TMa5cuM/UtOCSFSyCKj7tPanIUKwypVVrHfjop8jaFPMy5+Vs1qX00+1srMJGpQizrEAuSmXblV6FaqtflW4ZxNTBsHyc26cnNnkHHNR1CPBkO57nPO/Rf3vMyRZ9MrnGebDJjr3m+LKPxOLQnnueqWA+T6fa9MlsyVPRQttVDVBCY9xkMYVvcjGC2RW85eV7DqMZ7DvLpfwKLBXFNVbu4RjnGixg94xJO2ph8DGIRtKPcSV7hW4xe84k1bM4VpzGDWUK67PvCJL21uDevYwGZIuYVqC9vYwa6h3DaaLm45V6lQ7WEfBzg0lGuTlbCcq+2Re4oznOPCUG5C7TdeZL83uMUd7g3lxtV+E0X2G0Yf2VY+u9EjN4w+kmfbzrUDnR5r/lIf+akw+shP5froWZjrIz8l+yjCe/AuzPWRqfqPuV0i/53+W3rwDSpWR/8=
+   eJzl1jlOw0AUxvExuxQQHYJEFAkNqwRIgFlaMPvSgljPwHIG9huwl6FiKXMG4AYUwA0ogIL/yIMysuzEwZMU8KSf7BmN8unZflIcIURGuYaDtLrKPQtlhpWrrFy/HRfZGkWPZkz8rhpVTw0hzsrMXlShGjVIRMhNe3Ir0KlUavvNwn02CW0dJdfbr9xzVIa+H0Mt6gzlOj65GZ99mSOfTbdw321vxFxvv03C/5taFO571S1FyPX2VYqSuXKG4vkOqhrHRMB6EEPqfhgjeXIL6XUZKwHrWcyp+3ksGMw1VYXmHuIIx2r9gEc8aWf60I8B2IZyL3CJK7V+wSvetDOTmMI0ZgzleusDn/jS9laxhnVsFCnXrzaxhW3sGMptYeiSlnuV/GoXe9jHgaFcm6yU5V7tgNwTnOIM54ZyU6rfZI5+b3CLO9wbyk2qflM5+i3GHNlWNrs+ILcYcySfbSvXNrQHnPlLcxSmijFHYepnjp6FuTkKU3KOYnwH78LcHJmq/5jbIbL/00ulqxTNBdQ3jgRI7Q==
   </data>
  </layer>
- <layer id="7" name="player" width="30" height="29">
+ <layer id="7" name="player" width="30" height="30">
   <data encoding="base64" compression="zlib">
-   eJztzjEBAAAIA6DZ2/Am8PYQEpDwQdf1AAAA2AzC0gB+
+   eJztzgENAAAIA6Db2/DG0E1IQMIHXdsDAADgmgH94gB+
   </data>
  </layer>
- <layer id="8" name="enemy" width="30" height="29">
+ <layer id="8" name="enemy" width="30" height="30">
   <data encoding="base64" compression="zlib">
-   eJztz4ENACAIwDA8XXzcK4QE2weWRQCT7NXbP839SvnRKwDw1gUQBwGK
+   eJztzwENADAIwDAu/dw4Lk4CrYFlEcAk9/T2X3P/p1z0CgDMVMi3AYo=
   </data>
  </layer>
- <layer id="9" name="item" width="30" height="29">
+ <layer id="9" name="item" width="30" height="30">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUUBt8YRxoFwx/8A1HGH8fDfthA36MxuUoGAWjYBSMghEEALAfA94=
+   eJzt0cEJACAMBMHYf7sSfVqBP4MQZio49iKA1+b4vaC/vDRe2rexfQkA5Q6ATQPe
   </data>
  </layer>
- <layer id="5" name="foreground" width="30" height="29">
+ <layer id="5" name="foreground" width="30" height="30">
   <data encoding="base64" compression="zlib">
-   eJztzTkSAWEQhuF/Qsq+pCSWU+AOuIE9JbEcgNAlnMFyBssdcAdk3qCDKfFMU6W/qqeqO3qds9ls/7AIor5/jIncSaTkTiMTYLeAou9fYiV3CWW5K6gG2P3WOuiiJ38NdTRC7k4xw1z+Jlpoh9z93ABDjJS7Wttihz0Oit0jTjjjotjt44ob7ordBR544qXYXSPmORdHwtPrbpBFDnm9rM1m+7G9AYREFsQ=
+   eJztzTkSAWEQhuF/Qsq+pCSWU+AOuIE9JbEcgNAlnMFyBssdcAdk3lIdTIlnWqDfqqeqO/qcsyzrH4og6vvHmMidREruNDIB7hZQ9P1LrOQuoSx3BdUAd39VB1305K+hjkbIu1PMMJe/iRbaIe9+N8AQI+VdrbbYYY+D4u4RJ5xxUdzt44ob7oq7CzzwxEtxd42Y51wcCU9vd4MscsjrzVqWZX16AzDJFsQ=
   </data>
  </layer>
 </map>
