@@ -1,6 +1,7 @@
 from game import constants
 from game.action import Action
 
+
 class MoveEnemyAction(Action):
     """A code template for controlling actors. The responsibility of this
     class of objects is translate user input into some kind of intent.
@@ -18,6 +19,7 @@ class MoveEnemyAction(Action):
         Args:
             input_service (InputService): An instance of InputService.
         """
+        
 
     def execute(self, cast):
         """Executes the action using the given actors.
@@ -25,4 +27,4 @@ class MoveEnemyAction(Action):
         Args:
             cast (dict): The game actors {key: tag, value: list}.
         """
-        pass
+        cast['enemies'].update()
