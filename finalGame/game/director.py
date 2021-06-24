@@ -9,7 +9,7 @@ class Director(arcade.Window):
     self._script = None
     self._input_service = None
 
-    
+    '''
     self.processing_time = 0
     # Time for on_draw
     self.draw_time = 0
@@ -17,7 +17,7 @@ class Director(arcade.Window):
     self.frame_count = 0
     self.fps_start_timer = None
     self.fps = None
-    
+    '''
 
   def setup(self, cast, script, input_service):
     self._cast = cast
@@ -25,7 +25,7 @@ class Director(arcade.Window):
     self._input_service = input_service       
 
   def on_draw(self):
-    
+    '''
     # Start timing how long this takes
     start_time = timeit.default_timer()
     # --- Calculate FPS
@@ -41,12 +41,12 @@ class Director(arcade.Window):
       self.fps_start_timer = timeit.default_timer()
     # Add one to our frame count
     self.frame_count += 1
-    
+    '''
 
     arcade.start_render()
     self._cue_action('output')
 
-    
+    '''
     height = arcade.get_viewport()[3]
     width = arcade.get_viewport()[0]
     # Display timings
@@ -59,7 +59,7 @@ class Director(arcade.Window):
       arcade.draw_text(output, width, height - 75, arcade.color.BLACK, 18)
     # Stop the draw timer, and calculate total on_draw time.
     self.draw_time = timeit.default_timer() - start_time
-    
+    '''
 
   def on_key_press(self, symbol, modifiers):
     self._input_service.set_key(symbol, modifiers)

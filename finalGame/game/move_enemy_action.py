@@ -35,14 +35,6 @@ class MoveEnemyAction(Action):
       if arcade.Sprite.get_distance_between_sprites(cast['player'],enemy) > 10:
         enemy.set_move_behavior(0)
       else:
-        enemy.set_move_behavior(1) 
-                """
-                while self.enemy.fight_or_flight(cast['player'],cast['enemies']) != 0:
-                    cast['player']._get_position
-                    enemy.change_y = constants.PLAYER_MOVEMENT_SPEED
-                    enemy.change_y = -constants.PLAYER_MOVEMENT_SPEED
-                    enemy.change_x = -constants.PLAYER_MOVEMENT_SPEED
-                    enemy.change_x = constants.PLAYER_MOVEMENT_SPEED
-                    """
+        enemy.set_move_behavior(1)
 
-      cast['enemies'].update()
+    cast['enemies'].update()
