@@ -36,3 +36,7 @@ class InputService:
       player.change_x = constants.PLAYER_MOVEMENT_SPEED
     else:
       player.change_x = 0
+  
+  def update_options(self, player):
+    player.set_item_switch(arcade.key.E in self._keys)
+    player.set_item_drop(arcade.key.Q in self._keys)

@@ -1,4 +1,3 @@
-from warnings import catch_warnings
 from game import constants
 from game.action import Action
 import arcade
@@ -12,7 +11,7 @@ class HandleViewportAction(Action):
   def __init__(self):
     self._size = {}
 
-  def execute(self, cast):
+  def execute(self, cast, frame_count):
     """Executes the action using the given actors.
 
     Args:

@@ -11,7 +11,7 @@ class HandleCollisionsAction(Action):
   def __init__(self):
     return
 
-  def execute(self, cast):
+  def execute(self, cast, frame_count):
     """Executes the action using the given actors.
 
     Args:

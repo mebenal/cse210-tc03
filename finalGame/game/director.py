@@ -8,6 +8,7 @@ class Director(arcade.Window):
     self._cast = None
     self._script = None
     self._input_service = None
+    self._frame_count = 0
 
     '''
     self.processing_time = 0
@@ -22,7 +23,8 @@ class Director(arcade.Window):
   def setup(self, cast, script, input_service):
     self._cast = cast
     self._script = script
-    self._input_service = input_service       
+    self._input_service = input_service
+    #self._load_next_map()
 
   def on_draw(self):
     '''
@@ -70,18 +72,25 @@ class Director(arcade.Window):
     self._cue_action('input')
 
   def on_update(self, delta_time):
-    
+    '''
     # Start timing how long this takes
     start_time = timeit.default_timer()
-    
+    '''
 
+    self._frame_count += 1
     self._cue_action('update')
 
-    
+    '''
     # Stop the draw timer, and calculate total on_draw time.
     self.processing_time = timeit.default_timer() - start_time
-    
+    '''
 
   def _cue_action(self, tag):
     for action in self._script[tag]:
-      action.execute(self._cast)
+      action.execute(self._cast, self._frame_count)    
+  
+  def _load_next_map(self):
+    self._cast['map'].load_next_map()  
+    self._cast['player'] = self._cast['map'].get_layer('player')[0]
+    self._cast['enemies'] = self._cast['map'].get_layer('enemy')
+    self._cast['physics_engines'] = [arcade.PhysicsEngineSimple(self._cast['player'], self._cast['map'].get_layer('collision'))]
