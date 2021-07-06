@@ -1,7 +1,9 @@
+from game import constants
+from game.constants import MapDict
+
 import sys
 import math
-from game import constants
-from asciimatics.widgets import Frame
+from arcade import SpriteList
 
 class OutputService:
   """Outputs the game state. The responsibility of the class of objects is to draw the game state on the terminal. 
@@ -21,7 +23,7 @@ class OutputService:
     """
     return
         
-  def draw_layer(self, layer):
+  def draw_layer(self, layer:SpriteList):
     """Renders the given actor's text on the screen.
 
     Args:
@@ -29,7 +31,7 @@ class OutputService:
     """ 
     layer.draw(filter='')
 
-  def draw_layers(self, layers, drawOrder):
+  def draw_layers(self, layers:MapDict, drawOrder:list[str]):
     """Renders the given list of actors on the screen.
 
     Args:

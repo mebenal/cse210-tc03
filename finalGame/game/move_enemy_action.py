@@ -1,6 +1,7 @@
 from game import constants
+from game.constants import Cast
 from game.action import Action
-from game.enemy import Enemy
+
 import arcade
 
 
@@ -23,19 +24,29 @@ class MoveEnemyAction(Action):
       input_service (InputService): An instance of InputService.
     """
 
-  def execute(self, cast, frame_count):
+  def execute(self, cast:Cast, frame_count:int):
     """Executes the action using the given actors.
 
     Args:
       cast (dict): The game actors {key: tag, value: list}.
     """
     for enemy in cast['enemies']:
-      if arcade.get_distance_between_sprites(cast['player'], enemy) > 100:
-        enemy.set_move_behavior(0)
+      distance = arcade.get_distance_between_sprites(cast['player'], enemy)
+      if distance < 250:
+        weapon = enemy.get_item_of_type('weapon')
+        melee = True
+        if weapon != None:
+          melee = weapon.get_type() == 'melee'
+        if melee and distance > 25:
+          enemy.set_move_behavior(1)
+        elif not melee and distance < 200:
+          enemy.set_move_behavior(2)
+        else:
+          enemy.set_move_behavior(-1)
       else:
-        enemy.set_move_behavior(1)
+        enemy.set_move_behavior(0)
       
-      enemy.update_movement(frame_count, cast['map'].get_layer('collision'))
+      enemy.update_movement(frame_count, cast['map'].get_layer('collision'), cast['player'].position)
       
 
     

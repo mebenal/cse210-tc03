@@ -1,6 +1,12 @@
 from game import constants
+from game.constants import Cast
+from game.item import Item
 from game.action import Action
+
 import arcade
+from arcade import Sprite
+from arcade import SpriteList
+
 
 class HandleItemsAction(Action):
   """A code template for handling collisions. The responsibility of this class of objects is to update the game state when actors collide.
@@ -11,7 +17,7 @@ class HandleItemsAction(Action):
   def __init__(self):
     self._size = {}
 
-  def execute(self, cast, frame_count):
+  def execute(self, cast:Cast, frame_count:int):
     """Executes the action using the given actors.
 
     Args:
@@ -21,18 +27,18 @@ class HandleItemsAction(Action):
     items = cast['items']
   
     item_collisions = arcade.check_for_collision_with_list(player, cast['map'].get_layer('item'))
-    if player.get_item_switch() and len(item_collisions) != 0 and player.get_item_switch_cooldown() == 0:
+    if player.get_item_switch() and len(item_collisions) != 0 and player.can_switch_item():
       switch_dict = self.get_possible_switch(player, item_collisions[0])
       self.switch_item(player, items, switch_dict)
       player.reset_item_switch_cooldown()
-    elif player.get_item_drop() and player.get_item_switch_cooldown() == 0:
+    elif player.get_item_drop() and player.can_switch_item():
       self.drop_item(player, items)
       player.reset_item_switch_cooldown()
 
 
     for enemy in cast['enemies']:
       item_collisions = arcade.check_for_collision_with_list(enemy, cast['map'].get_layer('item'))
-      if len(item_collisions) != 0:
+      if len(item_collisions) != 0 and enemy.can_switch_item():
         switch_dict = self.get_possible_switch(enemy, item_collisions[0])
         switch = False
         if switch_dict['sprite_item'] == None:
@@ -43,7 +49,7 @@ class HandleItemsAction(Action):
           self.switch_item(enemy, items, switch_dict)
           enemy.reset_item_switch_cooldown()
 
-  def switch_item(self, sprite, item_layer, switch_dict):
+  def switch_item(self, sprite:Sprite, item_layer:SpriteList, switch_dict:dict[str:Item,str:Item]):
     if switch_dict['sprite_item'] != None:
       switch_dict['sprite_item'].position = switch_dict['ground_item'].position
       item_layer.append(switch_dict['sprite_item'])
@@ -51,18 +57,14 @@ class HandleItemsAction(Action):
     item_layer.remove(switch_dict['ground_item'])
     sprite.add_item(switch_dict['ground_item'])
 
-  def get_possible_switch(self, sprite, item):
-    possible_switch = [s_item for s_item in sprite.get_items() if s_item.get_slot() == item.get_slot()]
-    if len(possible_switch) != 0:
-      return { "sprite_item" : possible_switch[0],
-               "ground_item" : item }
-    else:
-      return { "sprite_item" : None,
-               "ground_item" : item }
+  def get_possible_switch(self, sprite:Sprite, item:Item) -> dict:
+    possible_switch = sprite.get_item_of_type(item.get_slot())
+    return { "sprite_item" : possible_switch,
+             "ground_item" : item }
 
-  def drop_item(self, sprite, item_layer):
-    possible_drop = [s_item for s_item in sprite.get_items() if s_item.get_slot() == 'weapon']
-    if len(possible_drop) > 0:
-      possible_drop[0].position = sprite.position
-      sprite.remove_item(possible_drop[0])
-      item_layer.append(possible_drop[0])
+  def drop_item(self, sprite:Sprite, item_layer:SpriteList):
+    possible_drop = sprite.get_item_of_type('weapon')
+    if possible_drop != None:
+      possible_drop.position = sprite.position
+      sprite.remove_item(possible_drop)
+      item_layer.append(possible_drop)

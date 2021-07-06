@@ -1,5 +1,8 @@
-import arcade
 from game import constants
+from game.constants import Cast
+from game.input_service import InputService
+
+import arcade
 import timeit
 
 class Director(arcade.Window):
@@ -18,12 +21,12 @@ class Director(arcade.Window):
     self.frame_count = 0
     self.fps_start_timer = None
     self.fps = None
-    '''
+    #'''
 
-  def setup(self, cast, script, input_service):
-    self._cast = cast
-    self._script = script
-    self._input_service = input_service
+  def setup(self, cast:Cast, script:list, input_service:InputService):
+    self._cast:Cast = cast
+    self._script:list = script
+    self._input_service:InputService = input_service
     #self._load_next_map()
 
   def on_draw(self):
@@ -43,7 +46,7 @@ class Director(arcade.Window):
       self.fps_start_timer = timeit.default_timer()
     # Add one to our frame count
     self.frame_count += 1
-    '''
+    #'''
 
     arcade.start_render()
     self._cue_action('output')
@@ -61,7 +64,7 @@ class Director(arcade.Window):
       arcade.draw_text(output, width, height - 75, arcade.color.BLACK, 18)
     # Stop the draw timer, and calculate total on_draw time.
     self.draw_time = timeit.default_timer() - start_time
-    '''
+    #'''
 
   def on_key_press(self, symbol, modifiers):
     self._input_service.set_key(symbol, modifiers)
@@ -71,11 +74,15 @@ class Director(arcade.Window):
     self._input_service.remove_key(symbol, modifiers)
     self._cue_action('input')
 
+  def on_mouse_motion(self, x, y, dx, dy):
+    self._cast['mouse'] = { 'x_pos':x - (self._cast["player"].center_x - arcade.get_viewport()[0]),
+                            'y_pos':y - (self._cast["player"].center_y - arcade.get_viewport()[2])}
+
   def on_update(self, delta_time):
     '''
     # Start timing how long this takes
     start_time = timeit.default_timer()
-    '''
+    #'''
 
     self._frame_count += 1
     self._cue_action('update')
@@ -83,9 +90,9 @@ class Director(arcade.Window):
     '''
     # Stop the draw timer, and calculate total on_draw time.
     self.processing_time = timeit.default_timer() - start_time
-    '''
+    #'''
 
-  def _cue_action(self, tag):
+  def _cue_action(self, tag:str):
     for action in self._script[tag]:
       action.execute(self._cast, self._frame_count)    
   

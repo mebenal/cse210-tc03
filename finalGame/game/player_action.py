@@ -1,4 +1,6 @@
 from game import constants
+from game.constants import Cast
+from game.input_service import InputService
 from game.action import Action
 
 class PlayerAction(Action):
@@ -12,7 +14,7 @@ class PlayerAction(Action):
     _input_service (InputService): An instance of InputService.
   """
 
-  def __init__(self, input_service):
+  def __init__(self, input_service:InputService):
     """The class constructor.
         
     Args:
@@ -20,7 +22,7 @@ class PlayerAction(Action):
     """
     self._input_service = input_service
 
-  def execute(self, cast, frame_count):
+  def execute(self, cast:Cast, frame_count:int):
     """Executes the action using the given actors.
 
     Args:

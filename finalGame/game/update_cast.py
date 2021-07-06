@@ -1,5 +1,6 @@
 from game import constants
 from game.action import Action
+from game.constants import Cast
 
 class UpdateCast(Action):
   """A code template for controlling actors. The responsibility of this
@@ -20,7 +21,7 @@ class UpdateCast(Action):
     """
     return
 
-  def execute(self, cast, frame_count):
+  def execute(self, cast:Cast, frame_count:int):
     """Executes the action using the given actors.
 
     Args:
@@ -28,3 +29,4 @@ class UpdateCast(Action):
    """
     cast['player'].update()
     cast['enemies'].update()
+    cast['projectiles'].update()

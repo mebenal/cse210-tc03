@@ -1,5 +1,7 @@
 from game import constants
+from game.constants import Cast
 from game.action import Action
+
 import arcade
 
 class HandleViewportAction(Action):
@@ -11,7 +13,7 @@ class HandleViewportAction(Action):
   def __init__(self):
     self._size = {}
 
-  def execute(self, cast, frame_count):
+  def execute(self, cast:Cast, frame_count:int):
     """Executes the action using the given actors.
 
     Args:
@@ -31,8 +33,8 @@ class HandleViewportAction(Action):
                          bottom_side,
                          bottom_side + constants.SCREEN_HEIGHT )
       
-  def _limit_x_axis(self, num):
+  def _limit_x_axis(self, num:int) -> int:
     return max(min(num, self._size['width'] - constants.SCREEN_WIDTH), 0)
 
-  def _limit_y_axis(self, num):
+  def _limit_y_axis(self, num:int) -> int:
     return max(min(num, self._size['height'] - constants.SCREEN_HEIGHT), 0)
