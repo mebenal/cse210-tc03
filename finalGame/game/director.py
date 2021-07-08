@@ -86,7 +86,8 @@ class Director(arcade.Window):
 
     self._frame_count += 1
     self._cue_action('update')
-
+    if len(self._cast['player'].sprite_lists) == 0:
+      arcade.close_window()
     '''
     # Stop the draw timer, and calculate total on_draw time.
     self.processing_time = timeit.default_timer() - start_time

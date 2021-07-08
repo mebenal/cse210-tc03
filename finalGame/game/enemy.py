@@ -15,6 +15,7 @@ class Enemy(Actor):
     super().__init__(sprite)
     self._set_scale(constants.CHARACTER_SCALING)
     self._move_behavior = 0
+    self._distance = 0
     
 
   def set_move_behavior(self, new_behavior:int):
@@ -66,4 +67,8 @@ class Enemy(Actor):
     angle = math.atan2(y, x)
     return angle
 
-  
+  def set_distance_to_player(self, distance:float):
+    self._distance = distance
+
+  def get_distance_to_player(self) -> float:
+    return self._distance
