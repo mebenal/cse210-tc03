@@ -27,7 +27,9 @@ class Director(arcade.Window):
     self._cast:Cast = cast
     self._script:list = script
     self._input_service:InputService = input_service
-    #self._load_next_map()
+    self._load_next_map()
+    self._load_next_map()
+    
 
   def on_draw(self):
     '''
