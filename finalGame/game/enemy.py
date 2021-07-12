@@ -51,7 +51,7 @@ class Enemy(Actor):
     self.change_y = 0
     self.change_x = 0
 
-  def move_towards_point(self, point:list[float,float]):
+  def move_towards_point(self, point: list[float,float]):
     angle = self.get_angle_to_point(point)
     self.change_x = constants.ENEMY_MOVEMENT_SPEED * math.cos(angle)
     self.change_y = constants.ENEMY_MOVEMENT_SPEED * math.sin(angle)

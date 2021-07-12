@@ -51,6 +51,7 @@ class Actor(Sprite):
       return None
 
   def get_items_of_type(self, type:str) -> list[Item]:
+    print(type)
     items = [item for item in self.get_items() if item.get_slot() == type]
     if len(items) > 0:
       return items
