@@ -11,6 +11,7 @@ class Actor(Sprite):
   def __init__(self, sprite:Sprite):
     super().__init__()
     self.__dict__ = sprite.__dict__.copy()
+    print(sprite.properties)
     self._health = int(sprite.properties['health'])
     self._items = []
     self._weapon_type = 'melee'
