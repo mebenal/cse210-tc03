@@ -27,7 +27,9 @@ class Director(arcade.Window):
     self._cast:Cast = cast
     self._script:list = script
     self._input_service:InputService = input_service
-    #self._load_next_map()
+    self._load_next_map()
+    self._load_next_map()
+    
 
   def on_draw(self):
     '''
@@ -101,4 +103,5 @@ class Director(arcade.Window):
     self._cast['map'].load_next_map()  
     self._cast['player'] = self._cast['map'].get_layer('player')[0]
     self._cast['enemies'] = self._cast['map'].get_layer('enemy')
+    self._cast['items'] = self._cast['map'].get_layer('item')
     self._cast['physics_engines'] = [arcade.PhysicsEngineSimple(self._cast['player'], self._cast['map'].get_layer('collision'))]

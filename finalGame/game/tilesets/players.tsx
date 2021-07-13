@@ -5,12 +5,6 @@
   <properties>
    <property name="health" type="int" value="100"/>
   </properties>
-  <animation>
-   <frame tileid="0" duration="250"/>
-   <frame tileid="1" duration="250"/>
-   <frame tileid="2" duration="250"/>
-   <frame tileid="1" duration="250"/>
-  </animation>
  </tile>
  <tile id="1">
   <properties>
