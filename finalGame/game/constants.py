@@ -13,6 +13,8 @@ PLAYER_MOVEMENT_SPEED = 5
 ENEMY_MOVEMENT_SPEED = 2
 PROJECTILE_SPEED = 20
 
+ENEMY_SIGHT = 250
+
 TILE_LAYERS = ['background', 'path', 'collision', 'player', 'enemy', 'item', 'foreground']
 DRAW_LAYERS = ['background', 'path', 'collision', 'player', 'enemy', 'item', 'projectile', 'foreground']
 

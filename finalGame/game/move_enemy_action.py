@@ -32,7 +32,8 @@ class MoveEnemyAction(Action):
     """
     for enemy in cast['enemies']:
       distance = arcade.get_distance_between_sprites(cast['player'], enemy)
-      if distance < 250:
+      enemy.set_distance_to_player(distance)
+      if distance < constants.ENEMY_SIGHT:
         weapon = enemy.get_item_of_type('weapon')
         melee = True
         if weapon != None:
