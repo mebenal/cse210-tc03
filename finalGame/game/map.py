@@ -45,7 +45,6 @@ class Map:
   def load_next_map(self):
     self._curr_map += 1
     self._set_layers()
-    print(f'Curr_map: {self._curr_map}')
     
 
   def get_layers(self) -> MapDict:

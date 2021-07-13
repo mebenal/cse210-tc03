@@ -54,6 +54,7 @@ class HandleItemsAction(Action):
       switch_dict['sprite_item'].position = switch_dict['ground_item'].position
       item_layer.append(switch_dict['sprite_item'])
     sprite.remove_item(switch_dict['sprite_item'])
+    print(switch_dict['ground_item'].position)
     item_layer.remove(switch_dict['ground_item'])
     sprite.add_item(switch_dict['ground_item'])
 
