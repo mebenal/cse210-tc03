@@ -12,9 +12,9 @@ class Item(Sprite):
     self._slot = sprite.properties['slot']
     self._type = sprite.properties['type']
     if self._slot == 'weapon':
-      self._range = int(sprite.properties['range'])
-      self._damage = int(sprite.properties['damage'])
-      self._cooldown = int(sprite.properties['cooldown'])
+      self._range = float(sprite.properties['range'])
+      self._damage = float(sprite.properties['damage'])
+      self._cooldown = float(sprite.properties['cooldown'])
     else:
       self._protection = int(sprite.properties['protection'])
 
