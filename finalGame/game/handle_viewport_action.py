@@ -1,8 +1,10 @@
-from game import constants
-from game.constants import Cast
-from game.action import Action
-
 import arcade
+
+from game import constants
+from game.action import Action
+from game.constants import Cast
+from game.director import Director
+
 
 class HandleViewportAction(Action):
   """A code template for handling collisions. The responsibility of this class of objects is to update the game state when actors collide.
@@ -13,7 +15,7 @@ class HandleViewportAction(Action):
   def __init__(self):
     self._size = {}
 
-  def execute(self, cast:Cast, frame_count:int):
+  def execute(self, director:Director, cast:Cast, frame_count:int):
     """Executes the action using the given actors.
 
     Args:

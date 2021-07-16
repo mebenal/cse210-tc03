@@ -1,7 +1,9 @@
 from game import constants
-from game.constants import Cast
-from game.input_service import InputService
 from game.action import Action
+from game.constants import Cast
+from game.director import Director
+from game.input_service import InputService
+
 
 class PlayerAction(Action):
   """A code template for controlling actors. The responsibility of this
@@ -22,7 +24,7 @@ class PlayerAction(Action):
     """
     self._input_service = input_service
 
-  def execute(self, cast:Cast, frame_count:int):
+  def execute(self, director:Director, cast:Cast, frame_count:int):
     """Executes the action using the given actors.
 
     Args:

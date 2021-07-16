@@ -27,8 +27,7 @@ class Director(arcade.Window):
     self._cast:Cast = cast
     self._script:list = script
     self._input_service:InputService = input_service
-    self._load_next_map()
-    self._load_next_map()
+    self.load_next_map()
     
 
   def on_draw(self):
@@ -97,9 +96,9 @@ class Director(arcade.Window):
 
   def _cue_action(self, tag:str):
     for action in self._script[tag]:
-      action.execute(self._cast, self._frame_count)    
+      action.execute(self, self._cast, self._frame_count)    
   
-  def _load_next_map(self):
+  def load_next_map(self):
     self._cast['map'].load_next_map()  
     self._cast['player'] = self._cast['map'].get_layer('player')[0]
     self._cast['enemies'] = self._cast['map'].get_layer('enemy')

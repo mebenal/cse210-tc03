@@ -9,7 +9,7 @@ class Action:
     _tag (string): The action tag (input, update or output).
   """
 
-  def execute(self, cast, frame_count):
+  def execute(self, director, cast, frame_count):
     """Executes the action using the given actors.
 
     Args:

@@ -1,13 +1,16 @@
-from game.item import Item
-from game.actor import Actor
-from game import constants
-from game.constants import Cast
-from game.action import Action
-from game.projectile import Projectile
+import math
 
 import arcade
 from arcade import SpriteList
-import math
+
+from game import constants
+from game.action import Action
+from game.actor import Actor
+from game.constants import Cast
+from game.director import Director
+from game.item import Item
+from game.projectile import Projectile
+
 
 class HandleAttackAction(Action):
   """A code template for handling collisions. The responsibility of this class of objects is to update the game state when actors collide.
@@ -18,7 +21,7 @@ class HandleAttackAction(Action):
   def __init__(self):
     return
 
-  def execute(self, cast:Cast, frame_count:int):
+  def execute(self, director:Director, cast:Cast, frame_count:int):
     """Executes the action using the given actors.
 
     Args:

@@ -1,11 +1,11 @@
-from game import constants
-from game.constants import Cast
-from game.item import Item
-from game.action import Action
-
 import arcade
-from arcade import Sprite
-from arcade import SpriteList
+from arcade import Sprite, SpriteList
+
+from game import constants
+from game.action import Action
+from game.constants import Cast
+from game.director import Director
+from game.item import Item
 
 
 class HandleItemsAction(Action):
@@ -17,7 +17,7 @@ class HandleItemsAction(Action):
   def __init__(self):
     self._size = {}
 
-  def execute(self, cast:Cast, frame_count:int):
+  def execute(self, director:Director, cast:Cast, frame_count:int):
     """Executes the action using the given actors.
 
     Args:
@@ -54,7 +54,6 @@ class HandleItemsAction(Action):
       switch_dict['sprite_item'].position = switch_dict['ground_item'].position
       item_layer.append(switch_dict['sprite_item'])
     sprite.remove_item(switch_dict['sprite_item'])
-    print(switch_dict['ground_item'].position)
     item_layer.remove(switch_dict['ground_item'])
     sprite.add_item(switch_dict['ground_item'])
 

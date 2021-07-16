@@ -71,7 +71,6 @@ class Actor(Sprite):
         damage -= item.get_protection()
     if damage > 0:
       self._health -= damage
-    print(self._health)
 
   def update(self):
     self._item_switch_cooldown -= 1 * int(self._item_switch_cooldown != 0)

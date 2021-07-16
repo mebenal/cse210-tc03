@@ -1,8 +1,9 @@
-from game import constants
-from game.constants import Cast
-from game.action import Action
-
 import arcade
+
+from game import constants
+from game.action import Action
+from game.constants import Cast
+from game.director import Director
 
 
 class MoveEnemyAction(Action):
@@ -24,7 +25,7 @@ class MoveEnemyAction(Action):
       input_service (InputService): An instance of InputService.
     """
 
-  def execute(self, cast:Cast, frame_count:int):
+  def execute(self, director:Director, cast:Cast, frame_count:int):
     """Executes the action using the given actors.
 
     Args:
