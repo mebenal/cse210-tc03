@@ -6,7 +6,7 @@
  <tileset firstgid="589" source="../../../../cse210-tc03-8/finalGame/game/tilesets/players.tsx"/>
  <layer id="7" name="background" width="100" height="45">
   <data encoding="base64" compression="zlib">
-   eJzt2s0JwyAYBmCnaHroDF2j09hBOlTx1Ll6aSCXUCJBP5Pn8IBEIW/4ND+SKaU0wY6eC72zjOi6YezlT3/+1eGmHiHkRU3UI0Yt8uJYWWnTph69M8BISoAMjOO1oncujqtU9gHns7b/8Q6Qjf7MAyLZsl87AuuL6MzRet6vgJl1D+fmHgAAdR4BMtDfnv/vckwlQIZIfH8AUMszBOIojc93D3DNAACfABla+gIDmadF
+   eJzt2rENwjAQBVBPQSiYgTUyjRmEoSiZCySC5CbCWA5nlFe8Lkq+dL7YOWVKKU3Q0aUQneUfHZ/mSocP98pLHU7qsbm54ppc1EQ9YuVCdBbUAWBL1xXRuQBgbf5xGyAb8awDRlIzr43O+A39xeis0XbOV8Cbvod98w4AgDbRc77o5/PS8/9d+tEf4/L9AUArewjs13mADAAA9wEy/NID/U+qVg==
   </data>
  </layer>
  <layer id="1" name="path" width="100" height="45">
@@ -16,7 +16,7 @@
  </layer>
  <layer id="2" name="collision" width="100" height="45">
   <data encoding="base64" compression="zlib">
-   eJztm79SFTEUxg9gp7QgJZ0zQqnyBirOgC+gPgI8BBb6CI4y8AIw/oES0witWiKNhVoKDYVQeDL3Zm4MZ3dz1pvkZDffzG/YZXNv9ubLl2T37gWIr5vIfU9mEpxfCt0dkkKUHwfE//rixzPk0RAjFbH+68gNT6YjnlcqUX7EVB/ycQcG48+9hr9L4OeHCniuth+uD+5+rn4sIy892AaZ+ejafJ7Sj2vIAoNFKH6E9IPT37lQfjxAHo7p3EPJ14+3yDvI248nyNMxnXso6TZ+jXyweFNRVufj+xBKill3bD+k6wWM+r6tTWQLBmOUrffIObLHqOMTcogcEceKH/9Kt6/Jg/bEXHvrzGzBVT84Mj48R74hJ0SZ4gct7Yvu8/aYpff3/+M9j5FXFsWPdNLZ0LkwXuwC7UfV/Y+PwG9/93rwNvDW0rlTJzcbKfLRBt9+UHWPJiWulLXt+lGVD2l+5Mxn5Avy1Wljd6yqy4fP/VqJfbGKNuPsuPiB/ER+OW2ss6HXU2vIKbIOJR8x+INcIJeEHzvIBjI/McpKLD9S9tGUVOk3jHLRdrzqa5uG8MPI5GQXynglzQ/OeJXT/M0lZO6bJD0fXfNdS5FODGTmEcMZUWYOmWQwJeBzSyWFqDx1de4/AF6GUyj3+T/kGOkrxSjb9Lrc/QjpZV27hZIEP2KsA9rU4Ur5N2trSfBDIj5SnuU44vgxAby1W26AtZ3qu7fy/C6tY2dfRapX4vOJs5HqqZPrRyxxrj/69P25JD9S50OCYvmhnP3iB62SD1mS5gc1hxQ/wktaPh5PNpcJpVvWdt/9kLDGtSXBj6Z7PGW84km1eI2UfEiThHxQ2Jnpmh8ryGrFMal+lHyMX6rmWPFjJPP7Gq1c8nHYYfRzn/q5nY3h9l/+RIEw
+   eJztm79SFTEUxg9gp7agpZ0zQgn6Bv6bAV9AfQRoeAMo4BEYcOAFZPxbQhqwVUu0sQBKtaEACk7m3syN4ezenPUmOdnNN/Mbdtm9N7n58iXZvXsB4usO8tiTyQT1S6G5PilE+bFH/K8rfrxGnvcxUhHLv4nc8uR2xHqlEuVHTHUhH7PQG38eDvn7CPz8UAHravvh+uDu5+rHM2Tdgx2QmY+2zecp/biBTDOYgeJHSD84/Z0L5ccT5OmI6h5Kvn68Q95D3n68RF6NqO6hpNt4E/losYUsV/CrDyXFLDu2H9K1BoO+b+sNsg29McrWB+QM+cQo4wA5RL4Qx4of/0q3r8mD9sRce+vMbMN1PzgyPqwiP5CfxDnFD1raF93n7TFL73/+j/c8QjYsih/ppLOhc2G82AXaj6r7H/vAb3/3evAB8NbSuVMnNxsp8tEE335QdY8mJa6Ute36UZUPaX7kzFfkG/LdaWN3rKrLh8/9Wol9sYom4+yoOEZOkFOnjXU29HpqEfmDLEHJRwzOkQvkkvDjLbKC3BsbZCWWHyn7aEqq9BsGuWg6XnW1TUP4YWRysgtlvJLmB2e8ymn+5hIy98MkPR9t811LkU70ZOYRw1/inLvIOIMJAZ9bKilE5amtc/8e8DKcQrnP/yHHSF8pxrnDXpe7HyG9rGu3UJLgR4x1QJMyXCn/Zm0sCX5IxEfK8zyOOH6MAW/tljOpvnsrz+/SOnL2VaRyJT6fOBWpnDq5fsQS5/qjS9+fS/IjdT4kKJYfytkvftAq+ZAlaX5Qc0jxI7yk5ePFeIRCKnTf2u66HxLWuLYk+DHsHk8Zr3hSDV4jJR/SJCEfFHZm2ubHPLJQcUyqHyUfo5eqOVb8GMj8vkYrl3wcthj93Kd+bmelv30FzL6DkQ==
   </data>
  </layer>
  <layer id="4" name="player" width="100" height="45">

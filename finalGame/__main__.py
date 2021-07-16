@@ -13,7 +13,7 @@ from game.update_cast import UpdateCast
 from game.draw_action import DrawAction
 from game.input_service import InputService
 from game.output_service import OutputService
-
+ 
 import arcade
 from arcade import PhysicsEngineSimple
 from typing import Iterable, List, TypedDict
