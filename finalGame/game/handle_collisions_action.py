@@ -1,8 +1,11 @@
-from game import constants
-from game.constants import Cast
-from game.action import Action
 
 import arcade
+from arcade.sprite import Sprite
+
+from game import constants
+from game.action import Action
+from game.constants import Cast
+from game.director import Director
 
 class HandleCollisionsAction(Action):
   """A code template for handling collisions. The responsibility of this class of objects is to update the game state when actors collide.
@@ -13,14 +16,17 @@ class HandleCollisionsAction(Action):
   def __init__(self):
     return
 
-  def execute(self, cast:Cast, frame_count:int):
+  def execute(self, director:Director, cast:Cast, frame_count:int):
     """Executes the action using the given actors.
 
     Args:
       cast (dict): The game actors {key: tag, value: list}.
     """
+
     for engine in cast['physics_engines']:
-      engine.update()
+      collisions = engine.update()
+      if len(collisions) > 0 and (collisions[0].properties['id'] == '245' or collisions[0].properties['id'] == '266'):
+        director.load_next_map()
 
     for projectile in cast['projectiles']:
       if projectile.has_traveled_distance():
