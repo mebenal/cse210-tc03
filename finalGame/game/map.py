@@ -1,5 +1,5 @@
 from game import constants
-from game.constants import MapDict
+from game.type_map_dict import MapDict
 from game.actor_player import Player
 from game.actor_enemy import Enemy
 from game.item import Item

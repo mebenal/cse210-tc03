@@ -2,7 +2,7 @@ import arcade
 
 from game import constants
 from game.action import Action
-from game.constants import Cast
+from game.type_game_cast import GameCast
 from game.director_game import DirectorGame
 
 
@@ -25,7 +25,7 @@ class ActionHandleMoveEnemy(Action):
       input_service (InputService): An instance of InputService.
     """
 
-  def execute(self, director:DirectorGame, cast:Cast, frame_count:int):
+  def execute(self, director:DirectorGame, cast:GameCast, frame_count:int):
     """Executes the action using the given actors.
 
     Args:

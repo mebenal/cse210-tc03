@@ -3,12 +3,12 @@ from arcade import Sprite, SpriteList
 
 from game import constants
 from game.action import Action
-from game.constants import Cast
+from game.type_game_cast import GameCast
 from game.director_game import DirectorGame
 from game.item import Item
 
 
-class HandleItemsAction(Action):
+class ActionHandleItems(Action):
   """A code template for handling collisions. The responsibility of this class of objects is to update the game state when actors collide.
     
   Stereotype:
@@ -17,7 +17,7 @@ class HandleItemsAction(Action):
   def __init__(self):
     self._size = {}
 
-  def execute(self, director:DirectorGame, cast:Cast, frame_count:int):
+  def execute(self, director:DirectorGame, cast:GameCast, frame_count:int):
     """Executes the action using the given actors.
 
     Args:

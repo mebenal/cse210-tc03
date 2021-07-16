@@ -1,11 +1,10 @@
 from game import constants
 from game.action import Action
-from game.constants import Cast
+from game.type_game_cast import GameCast
 from game.director_game import DirectorGame
-from game.input_service import InputService
 
 
-class PlayerAction(Action):
+class ActionUpdateCast(Action):
   """A code template for controlling actors. The responsibility of this
   class of objects is translate user input into some kind of intent.
     
@@ -16,19 +15,20 @@ class PlayerAction(Action):
     _input_service (InputService): An instance of InputService.
   """
 
-  def __init__(self, input_service:InputService):
+  def __init__(self):
     """The class constructor.
         
     Args:
       input_service (InputService): An instance of InputService.
     """
-    self._input_service = input_service
+    return
 
-  def execute(self, director:DirectorGame, cast:Cast, frame_count:int):
+  def execute(self, director:DirectorGame, cast:GameCast, frame_count:int):
     """Executes the action using the given actors.
 
     Args:
       cast (dict): The game actors {key: tag, value: list}.
    """
-    self._input_service.set_direction(cast['player'])
-    self._input_service.update_options(cast['player'])
+    cast['player'].update()
+    cast['enemies'].update()
+    cast['projectiles'].update()

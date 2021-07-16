@@ -1,5 +1,5 @@
 from game import constants
-from game.constants import Cast
+from game.type_game_cast import GameCast
 from game.input_service import InputService
 
 import arcade
@@ -24,8 +24,8 @@ class DirectorGame(arcade.View):
     self.fps = None
     #'''
 
-  def setup(self, cast:Cast, script:list, input_service:InputService):
-    self._cast:Cast = cast
+  def setup(self, cast:GameCast, script:list, input_service:InputService):
+    self._cast:GameCast = cast
     self._script:list = script
     self._input_service:InputService = input_service
     

@@ -1,6 +1,6 @@
 from game.ui import UI
 from game import constants
-from game.constants import MapDict
+from game.type_map_dict import MapDict
 
 import sys
 import math

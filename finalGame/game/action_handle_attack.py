@@ -6,7 +6,7 @@ from arcade import SpriteList
 from game import constants
 from game.action import Action
 from game.actor import Actor
-from game.constants import Cast
+from game.type_game_cast import GameCast
 from game.director_game import DirectorGame
 from game.item import Item
 from game.projectile import Projectile
@@ -21,7 +21,7 @@ class ActionHandleAttack(Action):
   def __init__(self):
     return
 
-  def execute(self, director:DirectorGame, cast:Cast, frame_count:int):
+  def execute(self, director:DirectorGame, cast:GameCast, frame_count:int):
     """Executes the action using the given actors.
 
     Args:
