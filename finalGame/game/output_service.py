@@ -1,3 +1,4 @@
+from game.ui import UI
 from game import constants
 from game.constants import MapDict
 
@@ -39,3 +40,6 @@ class OutputService:
     """ 
     for name in drawOrder:
       self.draw_layer(layers[name])
+
+  def draw_ui(self, ui:UI):
+    pass

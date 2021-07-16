@@ -5,9 +5,10 @@ from game.input_service import InputService
 import arcade
 import timeit
 
-class Director(arcade.Window):
-  def __init__(self):
-    super().__init__(constants.SCREEN_WIDTH, constants.SCREEN_HEIGHT, constants.SCREEN_TITLE)
+class Director(arcade.View):
+  def __init__(self,window):
+    #super().__init__(constants.SCREEN_WIDTH, constants.SCREEN_HEIGHT, constants.SCREEN_TITLE)
+    self.window = window
     self._cast = None
     self._script = None
     self._input_service = None

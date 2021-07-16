@@ -13,3 +13,4 @@ class DrawAction(Action):
 
   def execute(self, director:Director, cast:Cast, frame_count:int):
     self._output_service.draw_layers(cast['map'].get_layers(), constants.DRAW_LAYERS)
+    self._output_service.draw_ui(cast['ui'])

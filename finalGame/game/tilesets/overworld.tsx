@@ -888,6 +888,11 @@
   <properties>
    <property name="id" type="int" value="130"/>
   </properties>
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="6">
+    <polygon points="0,0 3,1 6,4 6,10 0,10"/>
+   </object>
+  </objectgroup>
  </tile>
  <tile id="131">
   <properties>
@@ -1028,11 +1033,21 @@
   <properties>
    <property name="id" type="int" value="150"/>
   </properties>
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="10" y="0">
+    <polygon points="0,0 0,7 3,9 6,9 6,0"/>
+   </object>
+  </objectgroup>
  </tile>
  <tile id="151">
   <properties>
    <property name="id" type="int" value="151"/>
   </properties>
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="9">
+    <polygon points="0,0 3,0 6,-3 6,-9 0,-9"/>
+   </object>
+  </objectgroup>
  </tile>
  <tile id="152">
   <properties>

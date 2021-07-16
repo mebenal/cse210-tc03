@@ -38,6 +38,7 @@ class MapDict(TypedDict):
   projectile: SpriteList
 
 
+from game.ui import UI
 from game.map import Map
 from game.item import Item
 from game.enemy import Enemy
@@ -54,3 +55,4 @@ class Cast(TypedDict, total=False):
   physics_engines: list[PhysicsEngineSimple]
   mouse: Mouse
   projectiles: Iterable[Projectile]
+  ui : UI

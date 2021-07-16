@@ -25,7 +25,7 @@ class Map:
                      'item'       : [ SpriteList(), False ],
                      'collision'  : [ SpriteList(), True  ],
                      'foreground' : [ SpriteList(), True  ],
-                     'projectile' : [ SpriteList(), False ]}
+                     'projectile' : [ SpriteList(), False ],}
     self._set_layers()
 
   def _set_layers(self):

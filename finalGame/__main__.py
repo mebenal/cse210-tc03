@@ -13,6 +13,7 @@ from game.update_cast import UpdateCast
 from game.draw_action import DrawAction
 from game.input_service import InputService
 from game.output_service import OutputService
+from game.ui import UI
  
 import arcade
 from arcade import PhysicsEngineSimple
@@ -28,6 +29,7 @@ def main():
   cast['projectiles'] = cast['map'].get_layer('projectile')
   cast['physics_engines'] = [PhysicsEngineSimple(cast['player'], cast['map'].get_layer('collision'))]
   cast['mouse'] = {'x_pos' : 0, 'y_pos' : 0}
+  cast['ui'] = UI()
 
   input_service = InputService()
   
@@ -35,8 +37,10 @@ def main():
   script['input'] = [PlayerAction(input_service)]
   script['update'] = [HandleCollisionsAction(), MoveEnemyAction(), HandleViewportAction(), HandleItemsAction(), HandleAttackAction(), UpdateCast()]
   script['output'] = [DrawAction(OutputService())]
-  director = Director()
+  window = arcade.Window(constants.SCREEN_WIDTH, constants.SCREEN_HEIGHT, constants.SCREEN_TITLE)
+  director = Director(window)
   director.setup(cast, script, input_service)
+  window.show_view(director)
   arcade.run()
 
 if __name__ == "__main__":

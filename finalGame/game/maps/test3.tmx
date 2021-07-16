@@ -3,10 +3,9 @@
  <tileset firstgid="1" source="../tilesets/overworld.tsx"/>
  <tileset firstgid="379" source="../tilesets/players.tsx"/>
  <tileset firstgid="499" source="../tilesets/weapons.tsx"/>
- <tileset firstgid="589" source="../../../../cse210-tc03-8/finalGame/game/tilesets/players.tsx"/>
  <layer id="7" name="background" width="100" height="45">
   <data encoding="base64" compression="zlib">
-   eJzt2rENwjAQBVBPQSiYgTUyjRmEoSiZCySC5CbCWA5nlFe8Lkq+dL7YOWVKKU3Q0aUQneUfHZ/mSocP98pLHU7qsbm54ppc1EQ9YuVCdBbUAWBL1xXRuQBgbf5xGyAb8awDRlIzr43O+A39xeis0XbOV8Cbvod98w4AgDbRc77o5/PS8/9d+tEf4/L9AUArewjs13mADAAA9wEy/NID/U+qVg==
+   eJzt2rsNwjAUBVBPQSiYgTUyjRmEoSiZCxAguYkwlsMzyilOFyVXun75WJlSShN0dCpEZ/lH+7u50u7DufKrh4M+VjdXHJOLTvQRKxeis6AHgDWdF0TnAoCl/Y/LANmIZx0wkpr92uiM3zBfjM4abef9Cngz97Bt7gEA0CZ6ny/6+jz1/H+XfszHuHx/ANDKM4SH4wAZ0DsAsE3XATL80g0Fkapt
   </data>
  </layer>
  <layer id="1" name="path" width="100" height="45">
@@ -16,7 +15,7 @@
  </layer>
  <layer id="2" name="collision" width="100" height="45">
   <data encoding="base64" compression="zlib">
-   eJztm79SFTEUxg9gp7agpZ0zQgn6Bv6bAV9AfQRoeAMo4BEYcOAFZPxbQhqwVUu0sQBKtaEACk7m3syN4ezenPUmOdnNN/Mbdtm9N7n58iXZvXsB4usO8tiTyQT1S6G5PilE+bFH/K8rfrxGnvcxUhHLv4nc8uR2xHqlEuVHTHUhH7PQG38eDvn7CPz8UAHravvh+uDu5+rHM2Tdgx2QmY+2zecp/biBTDOYgeJHSD84/Z0L5ccT5OmI6h5Kvn68Q95D3n68RF6NqO6hpNt4E/losYUsV/CrDyXFLDu2H9K1BoO+b+sNsg29McrWB+QM+cQo4wA5RL4Qx4of/0q3r8mD9sRce+vMbMN1PzgyPqwiP5CfxDnFD1raF93n7TFL73/+j/c8QjYsih/ppLOhc2G82AXaj6r7H/vAb3/3evAB8NbSuVMnNxsp8tEE335QdY8mJa6Ute36UZUPaX7kzFfkG/LdaWN3rKrLh8/9Wol9sYom4+yoOEZOkFOnjXU29HpqEfmDLEHJRwzOkQvkkvDjLbKC3BsbZCWWHyn7aEqq9BsGuWg6XnW1TUP4YWRysgtlvJLmB2e8ymn+5hIy98MkPR9t811LkU70ZOYRw1/inLvIOIMJAZ9bKilE5amtc/8e8DKcQrnP/yHHSF8pxrnDXpe7HyG9rGu3UJLgR4x1QJMyXCn/Zm0sCX5IxEfK8zyOOH6MAW/tljOpvnsrz+/SOnL2VaRyJT6fOBWpnDq5fsQS5/qjS9+fS/IjdT4kKJYfytkvftAq+ZAlaX5Qc0jxI7yk5ePFeIRCKnTf2u66HxLWuLYk+DHsHk8Zr3hSDV4jJR/SJCEfFHZm2ubHPLJQcUyqHyUfo5eqOVb8GMj8vkYrl3wcthj93Kd+bmelv30FzL6DkQ==
+   eJztm71S1UAUxw9ih7aiJR0zYqnwBvgxI08APoI2vAEW+AgOOPACMH6WuA3YqiXYWCgl2lgohWfn3p2sy0nunpjdPZvsf+Y33HBzSdhf/pvccAGIn+vIsifXEuxfitwZkyKUjwPie0Px8Qh5MMZERdz+DHLFk6sR9ytVKB8xM4R+3IbR/LM44esS+PlQAffV9uF6cJdz9XEfeebBLsjsR9/O5yl9XEYWGNyC4iOkD87xzoXycRe519G+h4qvj5fIK8jbxyqy1tG+h4oe4y3kjcU2sl7D1zFUFHPbsX1IzyZUx76dF8gOjOYoO6+RX8hbxjYOkSPkA/Fc8fFv9PiaPmgn5r237swOXPTBifHwFDlBvhDrFB90tBd9zNtzll5+9x8/8xh5blF8pIvuhu6FcbEPtI+6+x/vgT/+7vvBm8C7ls6dprjdSNGPNvgeB3X3aFLiRlmPXR91/ZDmI2c+Ip+Qz84Yu3NVUz987tdKPBbraDPPdsU35Dty6oyx7oa+nnqM/ECeQOlHDH4jf5BzwscesoHMTVVdieUj5TGakrqcQdWLtvPVUMc0hA8T05N9KPOVNB+c+Sqn8zeXkL2fFOn96Jt3HUWaGMWcRww/iXVuIJcYTAv4vaWSIlSf+nruPwBeh1Mk9/N/yDnSN4qx7qTX5e4jpMumcQsVCT5iXAe02YYb5T+srSPBh0R8ojzX44TjYwp41245k+pvb+Xzu3SOnWUVabsSP584G2k7TXF9xArn/ceQ/n4uyUfqfkhILB/KWS4+6JR+yIo0H9Q5pPgIn9KPKvPW46H7kHCNa0eCj0n3ePreDztd+FAtXiOlH9IioR8Udmf65uMhslLznFQfpR/dRzU8V3xUMf9fo5NLP456jP7cp/7czsb48V8e24M/
   </data>
  </layer>
  <layer id="4" name="player" width="100" height="45">
@@ -26,7 +25,7 @@
  </layer>
  <layer id="5" name="enemy" width="100" height="45">
   <data encoding="base64" compression="zlib">
-   eJzt2dEOgyAMhWH24ktMluy1Fy8WjUMHBGw5/b/rXaw9UgRTSml5pBD+1fkK0gcvWvNQyOmdqWHfj5rae/VDaQ4o1KJQgxLy8KUkj5HzEr9Kenv8jbc8VNa5Sh0qyMMXj3nkzgUrj/+1t5Yave0dStSfudmeHfU89mbLBkAcZ+9pq0hzGsB8ruYXAFjjDHgv+u1DzTc0MrsPvQYAII5n5b6fu1s5u2/hHqav2qwURKz5q3T98E0GsDVqTrWcyz3MTL4h2ynZN8hg42G9wA7nFByNmgnMGgCANfaiOh96Fh/j
+   eJzt2dEOwiAMhWF8cY2Jia9tdrFsmUyBwGhP/+/ai7VnFBkppfS8pRD+1fkK0gcrWvNQyOmdqWHfj5rae/VDaQ4o1KJQgxLysKUkj5HzEt9Kenv8jbU8VNa5Sh0qyMMWi3nkzgULi8/aW0uN1vYOJervnLd3Rz2PPW/ZAIjj7H/aItKcBuDPr/kFALNxBrwW/bah5g6NzK5DrwEAiONeue/nvq2cfW/hO0xftVkpiFjzqnT9cCcDzDVqTrWcyy3MTO6Q5ynZN8hgY2G9lHo4elYvOKfgaNRM8DRrAACa2IvqfAA4byBj
   </data>
  </layer>
  <layer id="6" name="item" width="100" height="45">
