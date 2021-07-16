@@ -3,10 +3,10 @@ import arcade
 from game import constants
 from game.action import Action
 from game.constants import Cast
-from game.director import Director
+from game.director_game import DirectorGame
 
 
-class MoveEnemyAction(Action):
+class ActionHandleMoveEnemy(Action):
   """A code template for controlling actors. The responsibility of this
   class of objects is translate user input into some kind of intent.
     
@@ -25,7 +25,7 @@ class MoveEnemyAction(Action):
       input_service (InputService): An instance of InputService.
     """
 
-  def execute(self, director:Director, cast:Cast, frame_count:int):
+  def execute(self, director:DirectorGame, cast:Cast, frame_count:int):
     """Executes the action using the given actors.
 
     Args:

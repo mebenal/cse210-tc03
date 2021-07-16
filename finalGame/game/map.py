@@ -1,7 +1,7 @@
 from game import constants
 from game.constants import MapDict
-from game.player import Player
-from game.enemy import Enemy
+from game.actor_player import Player
+from game.actor_enemy import Enemy
 from game.item import Item
 
 import os

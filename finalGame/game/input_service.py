@@ -1,5 +1,5 @@
 from game import constants
-from game.player import Player
+from game.actor_player import Player
 
 import arcade
 

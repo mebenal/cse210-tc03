@@ -1,6 +1,6 @@
 from arcade.sprite_list import SpriteList
 from game import constants
-from game.director import Director
+from game.director_game import DirectorGame
 from game.map import Map
 from game.constants import Cast
 from game.player_action import PlayerAction
@@ -8,9 +8,9 @@ from game.move_enemy_action import MoveEnemyAction
 from game.handle_viewport_action import HandleViewportAction
 from game.handle_items_action import HandleItemsAction
 from game.handle_collisions_action import HandleCollisionsAction
-from game.handle_attack_action import HandleAttackAction
+from game.action_handle_attack import ActionHandleAttack
 from game.update_cast import UpdateCast
-from game.draw_action import DrawAction
+from game.action_draw import ActionDraw
 from game.input_service import InputService
 from game.output_service import OutputService
 from game.ui import UI
@@ -35,10 +35,10 @@ def main():
   
   script = {}
   script['input'] = [PlayerAction(input_service)]
-  script['update'] = [HandleCollisionsAction(), MoveEnemyAction(), HandleViewportAction(), HandleItemsAction(), HandleAttackAction(), UpdateCast()]
-  script['output'] = [DrawAction(OutputService())]
+  script['update'] = [HandleCollisionsAction(), MoveEnemyAction(), HandleViewportAction(), HandleItemsAction(), ActionHandleAttack(), UpdateCast()]
+  script['output'] = [ActionDraw(OutputService())]
   window = arcade.Window(constants.SCREEN_WIDTH, constants.SCREEN_HEIGHT, constants.SCREEN_TITLE)
-  director = Director(window)
+  director = DirectorGame(window)
   director.setup(cast, script, input_service)
   window.show_view(director)
   arcade.run()

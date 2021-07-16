@@ -1,7 +1,7 @@
 from game import constants
 from game.action import Action
 from game.constants import Cast
-from game.director import Director
+from game.director_game import DirectorGame
 from game.input_service import InputService
 
 
@@ -24,7 +24,7 @@ class PlayerAction(Action):
     """
     self._input_service = input_service
 
-  def execute(self, director:Director, cast:Cast, frame_count:int):
+  def execute(self, director:DirectorGame, cast:Cast, frame_count:int):
     """Executes the action using the given actors.
 
     Args:
