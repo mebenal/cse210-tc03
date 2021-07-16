@@ -17,6 +17,12 @@ class Actor(Sprite):
     self._item_switch_cooldown = 0
     self._item_attack_cooldown = 0
 
+  def get_health(self) -> int:
+    return self._health
+
+  def set_health(self, health:int):
+    self._health = health
+
   def reset_item_attack_cooldown(self):
     cooldown = self.get_item_of_type('weapon')
     if cooldown:
@@ -43,6 +49,9 @@ class Actor(Sprite):
   def get_items(self) -> list:
     return self._items
   
+  def set_items(self, items:list):
+    self._items = items
+
   def get_item_of_type(self, type:str) -> Item:
     items = self.get_items_of_type(type)
     if items:
