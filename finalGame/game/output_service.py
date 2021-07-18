@@ -4,6 +4,7 @@ from game.type_map_dict import MapDict
 
 import sys
 import math
+import arcade
 from arcade import SpriteList
 
 class OutputService:
@@ -42,4 +43,13 @@ class OutputService:
       self.draw_layer(layers[name])
 
   def draw_ui(self, ui:UI):
-    pass
+    for i, (key, text) in enumerate(ui.get_text_elements().items()):
+      if text:
+        arcade.draw_text(text['string'], text['start_x'], text['start_y'], text['color'], text['font_size'])
+    for i, (key, sprite) in enumerate(ui.get_sprite_elements().items()):
+      if sprite:
+        sprite.draw()
+    rectangles = ui.get_rectangle_elements()
+    for i in constants.RECTANGLE_ORDER:
+      if rectangles[i]:
+        rectangles[i].draw()

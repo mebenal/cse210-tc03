@@ -1,3 +1,4 @@
+from game.load_animation_textures import LoadAnimationTextures
 from game import constants
 from game.type_game_cast import GameCast
 from game.input_service import InputService
@@ -28,6 +29,9 @@ class DirectorGame(arcade.View):
     self._cast:GameCast = cast
     self._script:list = script
     self._input_service:InputService = input_service
+    for enemy in self._cast['enemies']:
+      enemy.set_texures(self._cast['animation_textures'])
+    self._cast['player'].set_texures(self._cast['animation_textures'])
     
 
   def on_draw(self):
@@ -108,3 +112,8 @@ class DirectorGame(arcade.View):
     self._cast['enemies'] = self._cast['map'].get_layer('enemy')
     self._cast['items'] = self._cast['map'].get_layer('item')
     self._cast['physics_engines'] = [arcade.PhysicsEngineSimple(self._cast['player'], self._cast['map'].get_layer('collision'))]
+    self._cast['animation_textures'] = LoadAnimationTextures(self._cast['map'].get_tileset('actors'))
+
+    for enemy in self._cast['enemies']:
+      enemy.set_texures(self._cast['animation_textures'])
+    self._cast['player'].set_texures(self._cast['animation_textures'])

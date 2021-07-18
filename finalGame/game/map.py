@@ -1,3 +1,5 @@
+from typing import Union
+from pytiled_parser.objects import TileSet
 from game import constants
 from game.type_map_dict import MapDict
 from game.actor_player import Player
@@ -65,4 +67,9 @@ class Map:
     else:
        raise Exception("Error: Sprite list must be same length as layer list.")
   
-
+  def get_tileset(self, tileset_name:str) -> TileSet:
+    tilesets = self._map_list[0].tile_sets
+    for tileset in tilesets:
+      if tilesets[tileset].name == tileset_name:
+        return tilesets[tileset]
+    return None

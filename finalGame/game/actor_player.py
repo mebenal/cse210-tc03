@@ -1,9 +1,10 @@
+from game.actor_walking_animated import ActorWalkingAnimated
 from game import constants
 from game.actor import Actor
 
 from arcade import Sprite
 
-class Player(Actor):
+class Player(ActorWalkingAnimated):
   """
   """
 

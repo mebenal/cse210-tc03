@@ -11,7 +11,14 @@ class Actor(Sprite):
   def __init__(self, sprite:Sprite):
     super().__init__()
     self.__dict__ = sprite.__dict__.copy()
-    self._health = int(sprite.properties['health'])
+    try:
+      self._health = int(sprite.properties['health'])
+    except:
+      self._health = 100
+    try:
+      self._id = int(sprite.properties['id'])
+    except:
+      self._id = None
     self._items = []
     self._weapon_type = 'melee'
     self._item_switch_cooldown = 0
@@ -33,6 +40,13 @@ class Actor(Sprite):
   
   def get_item_attack_cooldown(self) -> float:
     return self._item_switch_cooldown
+
+  def get_weapon_cooldown(self) -> float:
+    cooldown = self.get_item_of_type('weapon')
+    if cooldown:
+      return cooldown.get_cooldown() * 60
+    else:
+      return 30
   
   def can_attack(self) -> bool:
     return self.get_item_attack_cooldown() == 0

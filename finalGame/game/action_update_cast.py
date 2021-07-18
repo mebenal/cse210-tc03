@@ -31,4 +31,7 @@ class ActionUpdateCast(Action):
    """
     cast['player'].update()
     cast['enemies'].update()
+    cast['player'].update_animation()
+    cast['enemies'].update_animation()
     cast['projectiles'].update()
+    cast['ui'].update(cast)

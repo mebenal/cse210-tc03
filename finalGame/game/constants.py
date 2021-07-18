@@ -15,7 +15,12 @@ PROJECTILE_SPEED = 20
 
 ENEMY_SIGHT = 250
 
+FACE_RIGHT = 1
+FACE_LEFT = 2
+FACE_UP = 3
+FACE_DOWN = 4
+
 TILE_LAYERS = ['background', 'path', 'collision', 'player', 'enemy', 'item', 'foreground']
 DRAW_LAYERS = ['background', 'path', 'collision', 'player', 'enemy', 'item', 'projectile', 'foreground']
 
-
+RECTANGLE_ORDER = ['player_weapon_cooldown', 'player_health_outline', 'player_health_bar']

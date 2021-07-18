@@ -1,6 +1,8 @@
+from game.load_animation_textures import LoadAnimationTextures
 from typing import Iterable, TypedDict
 
-from arcade import PhysicsEngineSimple, SpriteList
+from arcade import PhysicsEngineSimple
+from arcade.texture import Texture
 
 from game.actor_enemy import Enemy
 from game.actor_player import Player
@@ -20,3 +22,4 @@ class GameCast(TypedDict, total=False):
   mouse: Mouse
   projectiles: Iterable[Projectile]
   ui : UI
+  animation_textures: LoadAnimationTextures

@@ -1,3 +1,4 @@
+from game.actor_walking_animated import ActorWalkingAnimated
 from game import constants
 from game.actor import Actor
 
@@ -9,7 +10,7 @@ from arcade import Sprite
 from typing import Iterable
 
 
-class Enemy(Actor):
+class Enemy(ActorWalkingAnimated):
   def __init__(self, sprite:Sprite):
     """The class constructor."""
     super().__init__(sprite)
