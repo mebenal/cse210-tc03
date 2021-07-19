@@ -23,4 +23,4 @@ FACE_DOWN = 4
 TILE_LAYERS = ['background', 'path', 'collision', 'player', 'enemy', 'item', 'foreground']
 DRAW_LAYERS = ['background', 'path', 'collision', 'player', 'enemy', 'item', 'projectile', 'weapons', 'foreground']
 
-RECTANGLE_ORDER = ['player_weapon_cooldown', 'player_health_outline', 'player_health_bar']
+RECTANGLE_ORDER = ['player_weapon_cooldown', 'player_health_cooldown', 'player_health_outline', 'player_health_bar']

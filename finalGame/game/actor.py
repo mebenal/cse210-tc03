@@ -38,6 +38,9 @@ class Actor(Sprite):
   def get_health_use_cooldown(self) -> int:
     return self._health_use_cooldown
 
+  def get_reset_health_use_cooldown(self) -> int:
+    return 30
+
   def reset_item_attack_cooldown(self):
     cooldown = self.get_item_of_slot('weapon')
     if cooldown:
