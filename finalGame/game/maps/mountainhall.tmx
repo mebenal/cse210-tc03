@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.5" tiledversion="1.7.0" orientation="orthogonal" renderorder="right-down" width="50" height="100" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="1">
- <tileset firstgid="1" source="overworld.tsx"/>
- <tileset firstgid="379" source="../tilesets/players.tsx"/>
- <tileset firstgid="499" source="../../../../../../wpns_16x16_no_outline.tsx"/>
+ <tileset firstgid="1" source="../tilesets/overworld.tsx"/>
+ <tileset firstgid="379" source="../tilesets/actors.tsx"/>
+ <tileset firstgid="499" source="../tilesets/weapons.tsx"/>
  <layer id="1" name="background" width="50" height="100">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
