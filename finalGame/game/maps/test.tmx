@@ -20,7 +20,7 @@
  </layer>
  <layer id="7" name="player" width="30" height="30">
   <data encoding="base64" compression="zlib">
-   eJztzjEBAAAIA6DZ2/BeVtAHEpAAAADc6foesAbPawB+
+   eJztzgENAAAIA6Db2/DG0E1IQMIHXdsDAADgmgH94gB+
   </data>
  </layer>
  <layer id="8" name="enemy" width="30" height="30">
@@ -30,7 +30,7 @@
  </layer>
  <layer id="9" name="item" width="30" height="30">
   <data encoding="base64" compression="zlib">
-   eJztz8EJACAMQ9HWNdx/wjqAiAdL8doUNA+CN7+KEOXprfoFNYae0w/ZNt3Lbvv7zZ2oroUhuwuiGbuov/rubS92iYiIfjMBp38w4A==
+   eJztz7EJACAMRFHjEDZu4v4bxQFELAzB1gvoPTjS+TElQis5ptsCujXor9G67GuHbKus3W7b99VcVFfdkN0J0fRd1F9t97QXu0RERL8ZrscxNA==
   </data>
  </layer>
  <layer id="5" name="foreground" width="30" height="30">

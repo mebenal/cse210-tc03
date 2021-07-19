@@ -5,6 +5,7 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="25"/>
+   <property name="id" type="int" value="0"/>
    <property name="range" type="int" value="20"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -14,6 +15,7 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="10"/>
+   <property name="id" type="int" value="1"/>
    <property name="range" type="int" value="20"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -23,6 +25,7 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="15"/>
+   <property name="id" type="int" value="2"/>
    <property name="range" type="int" value="20"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -32,6 +35,7 @@
   <properties>
    <property name="cooldown" type="float" value="1.5"/>
    <property name="damage" type="int" value="20"/>
+   <property name="id" type="int" value="3"/>
    <property name="range" type="int" value="20"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -41,6 +45,7 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="15"/>
+   <property name="id" type="int" value="4"/>
    <property name="range" type="int" value="20"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -50,6 +55,7 @@
   <properties>
    <property name="cooldown" type="float" value="0.6"/>
    <property name="damage" type="int" value="15"/>
+   <property name="id" type="int" value="5"/>
    <property name="range" type="int" value="20"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -59,6 +65,7 @@
   <properties>
    <property name="cooldown" type="float" value="3"/>
    <property name="damage" type="int" value="100"/>
+   <property name="id" type="int" value="6"/>
    <property name="range" type="int" value="20"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -68,6 +75,7 @@
   <properties>
    <property name="cooldown" type="float" value="1.2"/>
    <property name="damage" type="int" value="20"/>
+   <property name="id" type="int" value="7"/>
    <property name="range" type="int" value="20"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -77,6 +85,7 @@
   <properties>
    <property name="cooldown" type="float" value="1.2"/>
    <property name="damage" type="int" value="20"/>
+   <property name="id" type="int" value="8"/>
    <property name="range" type="int" value="20"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -86,6 +95,7 @@
   <properties>
    <property name="cooldown" type="float" value="0.8"/>
    <property name="damage" type="int" value="20"/>
+   <property name="id" type="int" value="9"/>
    <property name="range" type="int" value="20"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -95,6 +105,7 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="0"/>
+   <property name="id" type="int" value="10"/>
    <property name="range" type="int" value="10"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -104,6 +115,7 @@
   <properties>
    <property name="cooldown" type="float" value="0.5"/>
    <property name="damage" type="int" value="10"/>
+   <property name="id" type="int" value="11"/>
    <property name="range" type="int" value="10"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -113,6 +125,7 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="0"/>
+   <property name="id" type="int" value="12"/>
    <property name="range" type="int" value="10"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -122,6 +135,7 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="0"/>
+   <property name="id" type="int" value="13"/>
    <property name="range" type="int" value="10"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -131,6 +145,7 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="0"/>
+   <property name="id" type="int" value="14"/>
    <property name="range" type="int" value="10"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -140,6 +155,7 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="0"/>
+   <property name="id" type="int" value="15"/>
    <property name="range" type="int" value="10"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -149,6 +165,7 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="0"/>
+   <property name="id" type="int" value="16"/>
    <property name="range" type="int" value="10"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -158,6 +175,7 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="8"/>
+   <property name="id" type="int" value="17"/>
    <property name="range" type="int" value="10"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -167,6 +185,7 @@
   <properties>
    <property name="cooldown" type="float" value="0.5"/>
    <property name="damage" type="int" value="10"/>
+   <property name="id" type="int" value="18"/>
    <property name="range" type="int" value="10"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -176,6 +195,7 @@
   <properties>
    <property name="cooldown" type="float" value="0.1"/>
    <property name="damage" type="int" value="1"/>
+   <property name="id" type="int" value="19"/>
    <property name="range" type="int" value="10"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -185,6 +205,7 @@
   <properties>
    <property name="cooldown" type="float" value="1.8"/>
    <property name="damage" type="int" value="30"/>
+   <property name="id" type="int" value="20"/>
    <property name="range" type="int" value="40"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -194,6 +215,7 @@
   <properties>
    <property name="cooldown" type="float" value="1.8"/>
    <property name="damage" type="int" value="30"/>
+   <property name="id" type="int" value="21"/>
    <property name="range" type="int" value="40"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -203,6 +225,7 @@
   <properties>
    <property name="cooldown" type="float" value="1.8"/>
    <property name="damage" type="int" value="30"/>
+   <property name="id" type="int" value="22"/>
    <property name="range" type="int" value="40"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -212,6 +235,7 @@
   <properties>
    <property name="cooldown" type="float" value="1.8"/>
    <property name="damage" type="int" value="30"/>
+   <property name="id" type="int" value="23"/>
    <property name="range" type="int" value="40"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -221,6 +245,7 @@
   <properties>
    <property name="cooldown" type="float" value="1.8"/>
    <property name="damage" type="int" value="30"/>
+   <property name="id" type="int" value="24"/>
    <property name="range" type="int" value="40"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -230,6 +255,7 @@
   <properties>
    <property name="cooldown" type="float" value="1.8"/>
    <property name="damage" type="int" value="30"/>
+   <property name="id" type="int" value="25"/>
    <property name="range" type="int" value="40"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -239,6 +265,7 @@
   <properties>
    <property name="cooldown" type="float" value="1.8"/>
    <property name="damage" type="int" value="30"/>
+   <property name="id" type="int" value="26"/>
    <property name="range" type="int" value="40"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -248,6 +275,7 @@
   <properties>
    <property name="cooldown" type="float" value="1.8"/>
    <property name="damage" type="int" value="30"/>
+   <property name="id" type="int" value="27"/>
    <property name="range" type="int" value="40"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -257,6 +285,7 @@
   <properties>
    <property name="cooldown" type="float" value="1.8"/>
    <property name="damage" type="int" value="30"/>
+   <property name="id" type="int" value="28"/>
    <property name="range" type="int" value="40"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -266,6 +295,7 @@
   <properties>
    <property name="cooldown" type="float" value="1.8"/>
    <property name="damage" type="int" value="30"/>
+   <property name="id" type="int" value="29"/>
    <property name="range" type="int" value="40"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -275,6 +305,7 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="10"/>
+   <property name="id" type="int" value="30"/>
    <property name="range" type="int" value="30"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -284,6 +315,7 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="10"/>
+   <property name="id" type="int" value="31"/>
    <property name="range" type="int" value="30"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -293,6 +325,7 @@
   <properties>
    <property name="cooldown" type="float" value="0.3"/>
    <property name="damage" type="int" value="5"/>
+   <property name="id" type="int" value="32"/>
    <property name="range" type="int" value="0"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -302,6 +335,7 @@
   <properties>
    <property name="cooldown" type="float" value="0.3"/>
    <property name="damage" type="int" value="5"/>
+   <property name="id" type="int" value="33"/>
    <property name="range" type="int" value="0"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -311,6 +345,7 @@
   <properties>
    <property name="cooldown" type="float" value="0.4"/>
    <property name="damage" type="int" value="5"/>
+   <property name="id" type="int" value="34"/>
    <property name="range" type="int" value="200"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -320,6 +355,8 @@
   <properties>
    <property name="cooldown" type="float" value="1.7"/>
    <property name="damage" type="int" value="15"/>
+   <property name="id" type="int" value="35"/>
+   <property name="projectile_id" type="int" value="35"/>
    <property name="range" type="int" value="100"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="ranged"/>
@@ -329,6 +366,7 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="10"/>
+   <property name="id" type="int" value="36"/>
    <property name="range" type="int" value="20"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -338,6 +376,7 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="5"/>
+   <property name="id" type="int" value="37"/>
    <property name="range" type="int" value="10"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -347,6 +386,7 @@
   <properties>
    <property name="cooldown" type="float" value="0.2"/>
    <property name="damage" type="int" value="2"/>
+   <property name="id" type="int" value="38"/>
    <property name="range" type="int" value="5"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -356,6 +396,7 @@
   <properties>
    <property name="cooldown" type="float" value="0.4"/>
    <property name="damage" type="int" value="5"/>
+   <property name="id" type="int" value="39"/>
    <property name="range" type="int" value="10"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -365,6 +406,8 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="15"/>
+   <property name="id" type="int" value="40"/>
+   <property name="projectile_id" type="int" value="50"/>
    <property name="range" type="int" value="500"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="ranged"/>
@@ -374,6 +417,8 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="15"/>
+   <property name="id" type="int" value="41"/>
+   <property name="projectile_id" type="int" value="50"/>
    <property name="range" type="int" value="500"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="ranged"/>
@@ -383,6 +428,8 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="30"/>
+   <property name="id" type="int" value="42"/>
+   <property name="projectile_id" type="int" value="50"/>
    <property name="range" type="int" value="500"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="ranged"/>
@@ -392,6 +439,8 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="15"/>
+   <property name="id" type="int" value="43"/>
+   <property name="projectile_id" type="int" value="50"/>
    <property name="range" type="int" value="500"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="ranged"/>
@@ -401,6 +450,8 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="15"/>
+   <property name="id" type="int" value="44"/>
+   <property name="projectile_id" type="int" value="50"/>
    <property name="range" type="int" value="500"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="ranged"/>
@@ -410,6 +461,8 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="15"/>
+   <property name="id" type="int" value="45"/>
+   <property name="projectile_id" type="int" value="50"/>
    <property name="range" type="int" value="500"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="ranged"/>
@@ -419,6 +472,8 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="15"/>
+   <property name="id" type="int" value="46"/>
+   <property name="projectile_id" type="int" value="50"/>
    <property name="range" type="int" value="500"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="ranged"/>
@@ -428,6 +483,8 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="15"/>
+   <property name="id" type="int" value="47"/>
+   <property name="projectile_id" type="int" value="50"/>
    <property name="range" type="int" value="500"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="ranged"/>
@@ -437,6 +494,8 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="15"/>
+   <property name="id" type="int" value="48"/>
+   <property name="projectile_id" type="int" value="50"/>
    <property name="range" type="int" value="500"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="ranged"/>
@@ -446,6 +505,8 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="15"/>
+   <property name="id" type="int" value="49"/>
+   <property name="projectile_id" type="int" value="50"/>
    <property name="range" type="int" value="500"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="ranged"/>
@@ -455,6 +516,7 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="0"/>
+   <property name="id" type="int" value="50"/>
    <property name="range" type="int" value="0"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -464,6 +526,7 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="0"/>
+   <property name="id" type="int" value="51"/>
    <property name="range" type="int" value="0"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -473,6 +536,7 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="0"/>
+   <property name="id" type="int" value="52"/>
    <property name="range" type="int" value="0"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -482,6 +546,7 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="0"/>
+   <property name="id" type="int" value="53"/>
    <property name="range" type="int" value="0"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -491,6 +556,7 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="0"/>
+   <property name="id" type="int" value="54"/>
    <property name="range" type="int" value="0"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -500,6 +566,7 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="0"/>
+   <property name="id" type="int" value="55"/>
    <property name="range" type="int" value="0"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -509,6 +576,7 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="0"/>
+   <property name="id" type="int" value="56"/>
    <property name="range" type="int" value="0"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -518,6 +586,7 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="0"/>
+   <property name="id" type="int" value="57"/>
    <property name="range" type="int" value="0"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -527,6 +596,7 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="0"/>
+   <property name="id" type="int" value="58"/>
    <property name="range" type="int" value="0"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -536,6 +606,7 @@
   <properties>
    <property name="cooldown" type="int" value="1"/>
    <property name="damage" type="int" value="0"/>
+   <property name="id" type="int" value="59"/>
    <property name="range" type="int" value="0"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -545,6 +616,7 @@
   <properties>
    <property name="cooldown" type="float" value="0.1"/>
    <property name="damage" type="int" value="1"/>
+   <property name="id" type="int" value="60"/>
    <property name="range" type="int" value="1"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -554,6 +626,7 @@
   <properties>
    <property name="cooldown" type="float" value="2.2"/>
    <property name="damage" type="int" value="30"/>
+   <property name="id" type="int" value="61"/>
    <property name="range" type="int" value="55"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -563,6 +636,7 @@
   <properties>
    <property name="cooldown" type="float" value="2.2"/>
    <property name="damage" type="int" value="30"/>
+   <property name="id" type="int" value="62"/>
    <property name="range" type="int" value="55"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -572,6 +646,7 @@
   <properties>
    <property name="cooldown" type="float" value="2.2"/>
    <property name="damage" type="int" value="30"/>
+   <property name="id" type="int" value="63"/>
    <property name="range" type="int" value="55"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -581,6 +656,7 @@
   <properties>
    <property name="cooldown" type="float" value="2.2"/>
    <property name="damage" type="int" value="30"/>
+   <property name="id" type="int" value="64"/>
    <property name="range" type="int" value="55"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -590,6 +666,7 @@
   <properties>
    <property name="cooldown" type="float" value="2.2"/>
    <property name="damage" type="int" value="30"/>
+   <property name="id" type="int" value="65"/>
    <property name="range" type="int" value="55"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -599,6 +676,7 @@
   <properties>
    <property name="cooldown" type="float" value="2.2"/>
    <property name="damage" type="int" value="30"/>
+   <property name="id" type="int" value="66"/>
    <property name="range" type="int" value="55"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -608,6 +686,7 @@
   <properties>
    <property name="cooldown" type="float" value="2.2"/>
    <property name="damage" type="int" value="30"/>
+   <property name="id" type="int" value="67"/>
    <property name="range" type="int" value="55"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -617,6 +696,7 @@
   <properties>
    <property name="cooldown" type="float" value="2.2"/>
    <property name="damage" type="int" value="30"/>
+   <property name="id" type="int" value="68"/>
    <property name="range" type="int" value="55"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -626,6 +706,7 @@
   <properties>
    <property name="cooldown" type="float" value="2.2"/>
    <property name="damage" type="int" value="30"/>
+   <property name="id" type="int" value="69"/>
    <property name="range" type="int" value="55"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -635,6 +716,8 @@
   <properties>
    <property name="cooldown" type="float" value="1.8"/>
    <property name="damage" type="int" value="40"/>
+   <property name="id" type="int" value="70"/>
+   <property name="projectile_id" type="int" value="59"/>
    <property name="range" type="int" value="300"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="ranged"/>
@@ -644,6 +727,8 @@
   <properties>
    <property name="cooldown" type="float" value="1.8"/>
    <property name="damage" type="int" value="40"/>
+   <property name="id" type="int" value="71"/>
+   <property name="projectile_id" type="int" value="59"/>
    <property name="range" type="int" value="300"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="ranged"/>
@@ -653,6 +738,8 @@
   <properties>
    <property name="cooldown" type="float" value="1.8"/>
    <property name="damage" type="int" value="40"/>
+   <property name="id" type="int" value="72"/>
+   <property name="projectile_id" type="int" value="59"/>
    <property name="range" type="int" value="300"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="ranged"/>
@@ -662,6 +749,8 @@
   <properties>
    <property name="cooldown" type="float" value="1.8"/>
    <property name="damage" type="int" value="40"/>
+   <property name="id" type="int" value="73"/>
+   <property name="projectile_id" type="int" value="59"/>
    <property name="range" type="int" value="300"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="ranged"/>
@@ -671,6 +760,8 @@
   <properties>
    <property name="cooldown" type="float" value="1.8"/>
    <property name="damage" type="int" value="40"/>
+   <property name="id" type="int" value="74"/>
+   <property name="projectile_id" type="int" value="59"/>
    <property name="range" type="int" value="300"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="ranged"/>
@@ -680,6 +771,8 @@
   <properties>
    <property name="cooldown" type="float" value="1.8"/>
    <property name="damage" type="int" value="40"/>
+   <property name="id" type="int" value="75"/>
+   <property name="projectile_id" type="int" value="59"/>
    <property name="range" type="int" value="300"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="ranged"/>
@@ -689,6 +782,8 @@
   <properties>
    <property name="cooldown" type="float" value="1.8"/>
    <property name="damage" type="int" value="40"/>
+   <property name="id" type="int" value="76"/>
+   <property name="projectile_id" type="int" value="59"/>
    <property name="range" type="int" value="300"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="ranged"/>
@@ -698,6 +793,8 @@
   <properties>
    <property name="cooldown" type="float" value="1.8"/>
    <property name="damage" type="int" value="40"/>
+   <property name="id" type="int" value="77"/>
+   <property name="projectile_id" type="int" value="59"/>
    <property name="range" type="int" value="300"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="ranged"/>
@@ -707,6 +804,8 @@
   <properties>
    <property name="cooldown" type="float" value="1.8"/>
    <property name="damage" type="int" value="40"/>
+   <property name="id" type="int" value="78"/>
+   <property name="projectile_id" type="int" value="59"/>
    <property name="range" type="int" value="300"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="ranged"/>
@@ -716,6 +815,8 @@
   <properties>
    <property name="cooldown" type="float" value="1.8"/>
    <property name="damage" type="int" value="40"/>
+   <property name="id" type="int" value="79"/>
+   <property name="projectile_id" type="int" value="59"/>
    <property name="range" type="int" value="300"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="ranged"/>
@@ -725,6 +826,7 @@
   <properties>
    <property name="cooldown" type="int" value="4"/>
    <property name="damage" type="int" value="50"/>
+   <property name="id" type="int" value="80"/>
    <property name="range" type="int" value="30"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -734,6 +836,7 @@
   <properties>
    <property name="cooldown" type="int" value="4"/>
    <property name="damage" type="int" value="50"/>
+   <property name="id" type="int" value="81"/>
    <property name="range" type="int" value="30"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -743,6 +846,7 @@
   <properties>
    <property name="cooldown" type="int" value="4"/>
    <property name="damage" type="int" value="50"/>
+   <property name="id" type="int" value="82"/>
    <property name="range" type="int" value="30"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -752,6 +856,7 @@
   <properties>
    <property name="cooldown" type="int" value="4"/>
    <property name="damage" type="int" value="50"/>
+   <property name="id" type="int" value="83"/>
    <property name="range" type="int" value="30"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -761,6 +866,7 @@
   <properties>
    <property name="cooldown" type="int" value="4"/>
    <property name="damage" type="int" value="50"/>
+   <property name="id" type="int" value="84"/>
    <property name="range" type="int" value="30"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -770,6 +876,7 @@
   <properties>
    <property name="cooldown" type="int" value="4"/>
    <property name="damage" type="int" value="30"/>
+   <property name="id" type="int" value="85"/>
    <property name="range" type="int" value="30"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -779,6 +886,7 @@
   <properties>
    <property name="cooldown" type="int" value="4"/>
    <property name="damage" type="int" value="30"/>
+   <property name="id" type="int" value="86"/>
    <property name="range" type="int" value="30"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -788,6 +896,7 @@
   <properties>
    <property name="cooldown" type="int" value="4"/>
    <property name="damage" type="int" value="50"/>
+   <property name="id" type="int" value="87"/>
    <property name="range" type="int" value="30"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -797,6 +906,7 @@
   <properties>
    <property name="cooldown" type="int" value="3"/>
    <property name="damage" type="int" value="25"/>
+   <property name="id" type="int" value="88"/>
    <property name="range" type="int" value="30"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>
@@ -806,6 +916,7 @@
   <properties>
    <property name="cooldown" type="int" value="3"/>
    <property name="damage" type="int" value="25"/>
+   <property name="id" type="int" value="89"/>
    <property name="range" type="int" value="30"/>
    <property name="slot" value="weapon"/>
    <property name="type" value="melee"/>

@@ -1,3 +1,4 @@
+from game.library_sound import LibrarySound
 from game.actor_walking_animated import ActorWalkingAnimated
 from game import constants
 from game.actor import Actor
@@ -34,4 +35,8 @@ class Player(ActorWalkingAnimated):
   def get_attack(self) -> bool:
     return self._attack_held
 
+  def update(self, sound: LibrarySound):
+    super().update(sound)
+    if (self.change_x != 0 or self.change_y != 0) and sound.get_last_played('walking') > 10:
+      sound.play_sound('walking')
  

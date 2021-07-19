@@ -1,3 +1,4 @@
+from game.library_items import LibraryItems
 import math
 
 import arcade
@@ -29,6 +30,7 @@ class ActionHandleAttack(Action):
     """
     player = cast['player']
     mouse = cast['mouse']
+    sound = cast['sound']
     
     if player.get_attack() and player.can_attack():
       weapon = player.get_item_of_type('weapon')
@@ -36,10 +38,15 @@ class ActionHandleAttack(Action):
         nearest = arcade.get_closest_sprite(player, cast['enemies'])
         if weapon and weapon.get_range() >= nearest[1]:
           nearest[0].take_damage(weapon.get_damage())
-        elif 50 >= nearest[1]:
+          sound.play_sound('player_melee_hit')
+        elif 50 >= nearest[1] and not weapon:
           nearest[0].take_damage(15)
+          sound.play_sound('fist_hit')
+        else:
+          sound.play_sound('swing')
       elif weapon.get_type() == 'ranged':
-        self.create_projectile(cast['projectiles'], player, weapon, [mouse['y_pos'], mouse['x_pos']], 'enemy')
+        self.create_projectile(cast['projectiles'], player, weapon, [mouse['y_pos'], mouse['x_pos']], 'enemy', cast['item_textures'])
+        sound.play_sound('bow')
       player.reset_item_attack_cooldown()
     
     for enemy in cast['enemies']:
@@ -49,15 +56,20 @@ class ActionHandleAttack(Action):
         if weapon == None or weapon.get_type() == 'melee':
           if weapon and weapon.get_range() >= distance:
             player.take_damage(weapon.get_damage())
-          elif 50 >= distance:
+            sound.play_sound('enemy_melee_hit')
+          elif 50 >= distance and not weapon:
             player.take_damage(15)
+            sound.play_sound('fist_hit')
+          else:
+            sound.play_sound('swing')
         elif weapon.get_type() == 'ranged':
           position_to_attack = [player.position[1] - enemy.position[1], player.position[0] - enemy.position[0]]
           self.create_projectile(cast['projectiles'], enemy, weapon, position_to_attack, 'player')
+          sound.play_sound('bow')
         enemy.reset_item_attack_cooldown()
 
-  def create_projectile(self, projectiles:SpriteList, sprite:Actor, weapon:Item, point:list[float,float], toAttack:str):
+  def create_projectile(self, projectiles:SpriteList, sprite:Actor, weapon:Item, point:list[float,float], toAttack:str, item_textures:LibraryItems):
     angle = math.atan2(point[0],point[1])
     change_x = constants.PROJECTILE_SPEED * math.cos(angle)
     change_y = constants.PROJECTILE_SPEED * math.sin(angle)
-    projectiles.append(Projectile(sprite.position[0], sprite.position[1], toAttack, weapon.get_damage(), change_x, change_y, weapon.get_range(), angle))
+    projectiles.append(Projectile(sprite.position[0], sprite.position[1], toAttack, weapon.get_damage(), change_x, change_y, weapon.get_range(), angle, weapon.get_projectile_id(), item_textures))

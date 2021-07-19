@@ -1,3 +1,4 @@
+from game.library_items import LibraryItems
 import math
 from game import constants
 from game.actor import Actor
@@ -9,8 +10,9 @@ class Projectile(Sprite):
   """
   """
 
-  def __init__(self, x_pos:int, y_pos:int, target:str, damage:float, change_x:float, change_y:float, distance:float, angle:float):
-    super().__init__(f'./finalGame/game/images/arrow.png', scale=2, image_x=0, image_y=0, image_width=16, image_height=16, center_x=x_pos, center_y=y_pos)
+  def __init__(self, x_pos:int, y_pos:int, target:str, damage:float, change_x:float, change_y:float, distance:float, angle:float, projectile_id:int, item_textures:LibraryItems):
+    super().__init__(None, scale=2, image_x=0, image_y=0, image_width=16, image_height=16, center_x=x_pos, center_y=y_pos)
+    self._set_texture2(item_textures.get_item_by_id(projectile_id))
     self._start_position = self.position
     self._target = target
     self._damage = damage

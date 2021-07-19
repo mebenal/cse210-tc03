@@ -34,6 +34,11 @@ class ActionHandleItems(Action):
     elif player.get_item_drop() and player.can_switch_item():
       self.drop_item(player, items)
       player.reset_item_switch_cooldown()
+    weapon = player.get_item_of_type('weapon')
+    if weapon:
+      x = player.position[0]
+      y = player.position[1] - 12
+      weapon.position = (x, y)
 
 
     for enemy in cast['enemies']:
@@ -48,6 +53,13 @@ class ActionHandleItems(Action):
         if switch:
           self.switch_item(enemy, items, switch_dict)
           enemy.reset_item_switch_cooldown()
+      if enemy.get_health() <= 0:
+        self.drop_item(enemy, items)
+      weapon = enemy.get_item_of_type('weapon')
+      if weapon:
+        x = enemy.position[0]
+        y = enemy.position[1] - 12
+        weapon.position = (x, y)
 
   def switch_item(self, sprite:Sprite, item_layer:SpriteList, switch_dict:dict[str:Item,str:Item]):
     if switch_dict['sprite_item'] != None:
@@ -64,7 +76,7 @@ class ActionHandleItems(Action):
 
   def drop_item(self, sprite:Sprite, item_layer:SpriteList):
     possible_drop = sprite.get_item_of_type('weapon')
-    if possible_drop != None:
+    if possible_drop:
       possible_drop.position = sprite.position
       sprite.remove_item(possible_drop)
       item_layer.append(possible_drop)

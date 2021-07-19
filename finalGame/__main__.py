@@ -1,7 +1,8 @@
-from game.load_animation_textures import LoadAnimationTextures
+from game.library_items import LibraryItems
+from game.library_sound import LibrarySound
+from game.library_animation_textures import LibraryAnimationTextures
 from game.type_script import Script
 from game.type_scripts import Scripts
-from typing import Iterable, List, TypedDict
 
 import arcade
 from arcade import PhysicsEngineSimple
@@ -39,8 +40,10 @@ def main():
   game_cast['physics_engines'] = [PhysicsEngineSimple(game_cast['player'], game_cast['map'].get_layer('collision'))]
   game_cast['mouse'] = {'x_pos' : 0, 'y_pos' : 0}
   game_cast['ui'] = UI()
-  game_cast['animation_textures'] = LoadAnimationTextures(game_cast['map'].get_tileset('actors'))
-  
+  game_cast['animation_textures'] = LibraryAnimationTextures(game_cast['map'].get_tileset('actors'))
+  game_cast['sound'] = LibrarySound()
+  game_cast['item_textures'] = LibraryItems(game_cast['map'].get_tileset('weapons'))
+
   casts['game_cast'] = game_cast
 
 
@@ -50,7 +53,7 @@ def main():
   game_script: Script = {}
 
   game_script['input'] = [ActionPlayer(input_service)]
-  game_script['update'] = [ActionHandleCollisions(), ActionHandleMoveEnemy(), ActionHandleViewport(), ActionHandleItems(), ActionHandleAttack(), ActionUpdateCast()]
+  game_script['update'] = [ActionHandleCollisions(), ActionHandleMoveEnemy(), ActionHandleViewport(), ActionHandleAttack(), ActionHandleItems(), ActionUpdateCast()]
   game_script['output'] = [ActionDraw(OutputService())]
 
   scripts['game_script'] = game_script

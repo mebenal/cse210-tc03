@@ -1,4 +1,4 @@
-from game.load_animation_textures import LoadAnimationTextures
+from game.library_animation_textures import LibraryAnimationTextures
 from game.actor import Actor
 from game import constants
 from typing import List
@@ -102,7 +102,7 @@ class ActorWalkingAnimated(Actor):
       self.width = self._texture.width * self.scale
       self.height = self._texture.height * self.scale
 
-  def set_texures(self, load_animation_textures:LoadAnimationTextures):
+  def set_texures(self, load_animation_textures:LibraryAnimationTextures):
     textures = load_animation_textures.get_texture_group(self._id)
     if textures:
       self.stand_right_textures = textures[1]['right']

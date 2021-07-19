@@ -1,4 +1,6 @@
-from game.load_animation_textures import LoadAnimationTextures
+from game.library_items import LibraryItems
+from game.library_sound import LibrarySound
+from game.library_animation_textures import LibraryAnimationTextures
 from typing import Iterable, TypedDict
 
 from arcade import PhysicsEngineSimple
@@ -22,4 +24,6 @@ class GameCast(TypedDict, total=False):
   mouse: Mouse
   projectiles: Iterable[Projectile]
   ui : UI
-  animation_textures: LoadAnimationTextures
+  animation_textures: LibraryAnimationTextures
+  sound: LibrarySound
+  item_textures: LibraryItems

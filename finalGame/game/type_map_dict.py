@@ -12,3 +12,4 @@ class MapDict(TypedDict):
   collision:  SpriteList
   foreground: SpriteList
   projectile: SpriteList
+  weapons:    SpriteList

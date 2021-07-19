@@ -27,7 +27,8 @@ class Map:
                      'item'       : [ SpriteList(), False ],
                      'collision'  : [ SpriteList(), True  ],
                      'foreground' : [ SpriteList(), True  ],
-                     'projectile' : [ SpriteList(), False ],}
+                     'projectile' : [ SpriteList(), False ],
+                     'weapons'    : [ SpriteList(), False ]}
     self._set_layers()
 
   def _set_layers(self):
@@ -43,7 +44,9 @@ class Map:
     self.replace_layer('player', [Player(self.get_layer('player')[0])])
     self.replace_layer('enemy', [Enemy(enemy) for enemy in self.get_layer('enemy')])
     self.replace_layer('item', [Item(item) for item in self.get_layer('item')])
-  
+    for item in self._layers['item'][0]:
+      self._layers['weapons'][0].append(item)
+
   def load_next_map(self):
     self._curr_map += 1
     self._set_layers()

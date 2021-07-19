@@ -1,3 +1,4 @@
+from game.library_sound import LibrarySound
 from game import constants
 from game.item import Item
 
@@ -95,8 +96,9 @@ class Actor(Sprite):
     if damage > 0:
       self._health -= damage
 
-  def update(self):
+  def update(self, sound:LibrarySound):
     self._item_switch_cooldown -= 1 * int(self._item_switch_cooldown != 0)
     self._item_attack_cooldown -= 1 * int(self._item_attack_cooldown != 0)
     if self._health <= 0:
+      sound.play_sound('death')
       self.kill()

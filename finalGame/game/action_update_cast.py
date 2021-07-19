@@ -29,9 +29,11 @@ class ActionUpdateCast(Action):
     Args:
       cast (dict): The game actors {key: tag, value: list}.
    """
-    cast['player'].update()
-    cast['enemies'].update()
+    cast['player'].update(cast['sound'])
+    for enemy in cast['enemies']:
+      enemy.update(cast['sound'])
     cast['player'].update_animation()
     cast['enemies'].update_animation()
     cast['projectiles'].update()
     cast['ui'].update(cast)
+    cast['sound'].update()

@@ -30,5 +30,6 @@ class ActionPlayer(Action):
     Args:
       cast (dict): The game actors {key: tag, value: list}.
    """
-    self._input_service.set_direction(cast['player'])
-    self._input_service.update_options(cast['player'])
+    player = cast['player']
+    self._input_service.set_direction(player)
+    self._input_service.update_options(player)
