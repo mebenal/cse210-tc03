@@ -33,7 +33,7 @@ class ActionHandleAttack(Action):
     sound = cast['sound']
     
     if player.get_attack() and player.can_attack():
-      weapon = player.get_item_of_type('weapon')
+      weapon = player.get_item_of_slot('weapon')
       if weapon == None or weapon.get_type() == 'melee':
         nearest = arcade.get_closest_sprite(player, cast['enemies'])
         if weapon and weapon.get_range() >= nearest[1]:
@@ -52,7 +52,7 @@ class ActionHandleAttack(Action):
     for enemy in cast['enemies']:
       distance = enemy.get_distance_to_player()
       if distance < constants.ENEMY_SIGHT and enemy.can_attack():
-        weapon = enemy.get_item_of_type('weapon')
+        weapon = enemy.get_item_of_slot('weapon')
         if weapon == None or weapon.get_type() == 'melee':
           if weapon and weapon.get_range() >= distance:
             player.take_damage(weapon.get_damage())

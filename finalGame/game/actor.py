@@ -24,6 +24,7 @@ class Actor(Sprite):
     self._weapon_type = 'melee'
     self._item_switch_cooldown = 0
     self._item_attack_cooldown = 0
+    self._health_use_cooldown = 0
 
   def get_health(self) -> int:
     return self._health
@@ -31,8 +32,14 @@ class Actor(Sprite):
   def set_health(self, health:int):
     self._health = health
 
+  def reset_health_use_cooldown(self):
+    self._health_use_cooldown = 30
+  
+  def get_health_use_cooldown(self) -> int:
+    return self._health_use_cooldown
+
   def reset_item_attack_cooldown(self):
-    cooldown = self.get_item_of_type('weapon')
+    cooldown = self.get_item_of_slot('weapon')
     if cooldown:
       cooldown = cooldown.get_cooldown() * 60
     else:
@@ -43,7 +50,7 @@ class Actor(Sprite):
     return self._item_switch_cooldown
 
   def get_weapon_cooldown(self) -> float:
-    cooldown = self.get_item_of_type('weapon')
+    cooldown = self.get_item_of_slot('weapon')
     if cooldown:
       return cooldown.get_cooldown() * 60
     else:
@@ -75,7 +82,21 @@ class Actor(Sprite):
       return None
 
   def get_items_of_type(self, type:str) -> list[Item]:
-    items = [item for item in self.get_items() if item.get_slot() == type]
+    items = [item for item in self.get_items() if item.get_type() == type]
+    if len(items) > 0:
+      return items
+    else:
+      return None
+
+  def get_item_of_slot(self, slot:str) -> Item:
+    items = self.get_items_of_slot(slot)
+    if items:
+      return items[0]
+    else:
+      return None
+
+  def get_items_of_slot(self, slot:str) -> list[Item]:
+    items = [item for item in self.get_items() if item.get_slot() == slot]
     if len(items) > 0:
       return items
     else:
@@ -89,16 +110,20 @@ class Actor(Sprite):
     self._items.append(item)
 
   def take_damage(self, damage:float):
-    protection = self.get_items_of_type('protection')
+    protection = self.get_items_of_slot('protection')
     if protection:
       for item in protection:
         damage -= item.get_protection()
     if damage > 0:
       self._health -= damage
 
+  def add_health(self, health:int):
+    self._health = min(self._health + health, 100)
+
   def update(self, sound:LibrarySound):
     self._item_switch_cooldown -= 1 * int(self._item_switch_cooldown != 0)
     self._item_attack_cooldown -= 1 * int(self._item_attack_cooldown != 0)
+    self._health_use_cooldown  -= 1 * int(self._health_use_cooldown  != 0)
     if self._health <= 0:
       sound.play_sound('death')
       self.kill()

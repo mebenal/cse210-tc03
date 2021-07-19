@@ -28,17 +28,29 @@ class ActionHandleItems(Action):
   
     item_collisions = arcade.check_for_collision_with_list(player, cast['map'].get_layer('item'))
     if player.get_item_switch() and len(item_collisions) != 0 and player.can_switch_item():
-      switch_dict = self.get_possible_switch(player, item_collisions[0])
-      self.switch_item(player, items, switch_dict)
-      player.reset_item_switch_cooldown()
+      if item_collisions[0].get_slot() == 'weapon':
+        switch_dict = self.get_possible_switch(player, item_collisions[0])
+        self.switch_item(player, items, switch_dict)
+        player.reset_item_switch_cooldown()
+      elif item_collisions[0].get_type() == 'health':
+        player.add_item(item_collisions[0])
+        items.remove(item_collisions[0])
+        cast['map'].get_layer('weapons').remove(item_collisions[0])
     elif player.get_item_drop() and player.can_switch_item():
       self.drop_item(player, items)
       player.reset_item_switch_cooldown()
-    weapon = player.get_item_of_type('weapon')
+    elif player.get_use_health() and player.get_health() < 100 and player.get_health_use_cooldown() == 0:
+      health = player.get_item_of_type('health')
+      if health:
+        player.remove_item(health)
+        player.add_health(health.get_health())
+        player.reset_health_use_cooldown()
+    weapon = player.get_item_of_slot('weapon')
     if weapon:
       x = player.position[0]
       y = player.position[1] - 12
       weapon.position = (x, y)
+      
 
 
     for enemy in cast['enemies']:
@@ -55,7 +67,7 @@ class ActionHandleItems(Action):
           enemy.reset_item_switch_cooldown()
       if enemy.get_health() <= 0:
         self.drop_item(enemy, items)
-      weapon = enemy.get_item_of_type('weapon')
+      weapon = enemy.get_item_of_slot('weapon')
       if weapon:
         x = enemy.position[0]
         y = enemy.position[1] - 12
@@ -70,12 +82,12 @@ class ActionHandleItems(Action):
     sprite.add_item(switch_dict['ground_item'])
 
   def get_possible_switch(self, sprite:Sprite, item:Item) -> dict:
-    possible_switch = sprite.get_item_of_type(item.get_slot())
+    possible_switch = sprite.get_item_of_slot(item.get_slot())
     return { "sprite_item" : possible_switch,
              "ground_item" : item }
 
   def drop_item(self, sprite:Sprite, item_layer:SpriteList):
-    possible_drop = sprite.get_item_of_type('weapon')
+    possible_drop = sprite.get_item_of_slot('weapon')
     if possible_drop:
       possible_drop.position = sprite.position
       sprite.remove_item(possible_drop)

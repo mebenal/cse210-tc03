@@ -16,6 +16,7 @@ class Player(ActorWalkingAnimated):
     self._item_switch_held = None
     self._item_drop_held = None
     self._attack_held = None
+    self._use_health_held = None
 
   def set_item_switch(self, key_pressed:bool):
     self._item_switch_held = key_pressed
@@ -34,6 +35,12 @@ class Player(ActorWalkingAnimated):
 
   def get_attack(self) -> bool:
     return self._attack_held
+
+  def set_use_health(self, key_pressed:bool):
+    self._use_health_held = key_pressed
+  
+  def get_use_health(self) -> bool:
+    return self._use_health_held
 
   def update(self, sound: LibrarySound):
     super().update(sound)

@@ -1435,7 +1435,10 @@
  </tile>
  <tile id="210">
   <properties>
+   <property name="health" type="int" value="33"/>
    <property name="id" type="int" value="210"/>
+   <property name="slot" value="special"/>
+   <property name="type" value="health"/>
   </properties>
  </tile>
  <tile id="211">

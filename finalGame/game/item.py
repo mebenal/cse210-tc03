@@ -19,8 +19,11 @@ class Item(Sprite):
         self._range = float(sprite.properties['range'])
         self._damage = float(sprite.properties['damage'])
         self._cooldown = float(sprite.properties['cooldown'])
-      else:
+      elif self._slot != 'special':
         self._protection = int(sprite.properties['protection'])
+      elif self._slot == 'special':
+        if self._type == 'health':
+          self._health = int(sprite.properties['health'])
     except:
       self.slot = 'invaild'
       self.type = 'invalid'
@@ -45,3 +48,6 @@ class Item(Sprite):
   
   def get_projectile_id(self) -> int:
     return self._projectile_id
+
+  def get_health(self) -> int:
+    return self._health

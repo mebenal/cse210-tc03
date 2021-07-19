@@ -53,9 +53,9 @@ class UI:
     self._text_elements['hp']['start_y'] = player.position[1] + 24
     
     
-    if player.get_item_of_type('weapon') != None:
+    if player.get_item_of_slot('weapon') != None:
       weapon = Sprite(None, sprite_scaling, 0, 0, sprite_size, sprite_size, screen_left_offset, screen_bottom_offset)
-      weapon._set_texture2(player.get_item_of_type('weapon')._get_texture())
+      weapon._set_texture2(player.get_item_of_slot('weapon')._get_texture())
       self._sprite_elements['player_weapon'] = weapon
     else:
       self._sprite_elements['player_weapon'] = None
