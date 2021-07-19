@@ -4,32 +4,32 @@
  <tileset firstgid="379" source="../tilesets/actors.tsx"/>
  <tileset firstgid="499" source="../tilesets/weapons.tsx"/>
  <tileset firstgid="589" source="../../../../cse210-tc03-11/finalGame/game/tilesets/weapons.tsx"/>
- <layer id="7" name="background" width="100" height="45">
+ <layer id="7" name="background" width="100" height="45" visible="0">
   <data encoding="base64" compression="zlib">
    eJzt2rsNwjAUBVBPQSiYgTUyjRmEoSiZCxAguYkwlsMzyilOFyVXun75WJlSShN0dCpEZ/lH+7u50u7DufKrh4M+VjdXHJOLTvQRKxeis6AHgDWdF0TnAoCl/Y/LANmIZx0wkpr92uiM3zBfjM4abef9Cngz97Bt7gEA0CZ6ny/6+jz1/H+XfszHuHx/ANDKM4SH4wAZ0DsAsE3XATL80g0Fkapt
   </data>
  </layer>
- <layer id="1" name="path" width="100" height="45">
+ <layer id="1" name="path" width="100" height="45" visible="0">
   <data encoding="base64" compression="zlib">
    eJzt2NEJgDAMBUB30kXVHdQxDX6qAQWxFe/g/QdC2pCmAQAAINNGutJFANXpI0NkLF0ImykyR5bShXCYjWxW5jeL+rH9bJgVuM979Rz7U12yP0Gf6pL16exW4b0CIOPGDQAA19y5r9izAQAAAAD4ghVN/xaQ
   </data>
  </layer>
  <layer id="2" name="collision" width="100" height="45">
   <data encoding="base64" compression="zlib">
-   eJztm7tO3EAUhg+XDtJCKOmQCCWENyAQKTwB8AikyRtAAY+AkghegBW3lGQaoIYSaCiAMklDESg4R9iyGWbsGcszc2Z3fukTa9Yrm/n8217brALA3wDMGRJi3UJyDf7zHt6O+7Hid8RIgPXznRXkc0buQ3hc/hAybMg7j+sVKiofPtML/ZhGZpCPNT9nwcyHcLiuZR+yB3k6Vh8LyKYBO8CzHzqSD/sMIh8smILkw6UPm+3dFpWPT8h8C+vtMqY+9pB9iNvHErLcwnq7DI3xd+SwxA/km4abDJUPYbls3z64ZwOKbb+cn8g2vPVEPCCXYN6PE+QUOVO8l3y8zgEUfSAnMxnUmW14OWaoYuIj97COXGnmTz7UIS9H8LoHNP1LM7+JD5pnq0Ty4S51Pqgb1IvcRUczv+76x2+wH3/5++Ak2J1Lx0ydD7kbIfrRBNPtQHeNJiTy+IoKH7p+cPMRMzS+58iFNMbyvqqqHybXazluizqa7Gfb4ha5Q+6lMaZu0PnUKrzcJ/kKqR8++I88Ik8KH7vIGjLeV3TFl4+Q22hIdMfzP1D0oun+qlfH1IWPPHlPOpD2V9x82OyvYjp+2+Ky97H3o9u80/gKnQwojiM5/xTzjCH9Fgww+Lu5wuV+bbce+4/BrsNcfMSEy32kqQ9hOJ/J52L34dJliOfhOPjwcR7QZBlV1xNdhYMPjlDq9lei5v0msfHRB3bnbjFD995CHM/T87vqyPejhKflcnw+cdTTcqpi83xJm7H5/pHun7sPx35wiC8fQppOPtRJ/eAVbj5Ux5Dkw31SP4pMlF73ug8O57jlcPBRd42n2/tRThs+RIPPcOkHt3Doh4pyZ7rNxxdkUfMeVx+pH+1HVLyXfBTJ/7+GQj7Wsmnf2PgIsX6+oOc+O5kHev0MEhIVUg==
+   eJztm7FS1UAUhg9Kh7YIJZ0zYinwBiDMyBOojwCNb4CFPoIjDL4AdwChZLZRayyVhkIt1cZCLTxnzE7CspvsZrK7Z+89/8w33JDcyWa/nE1Ili0A+JGYbWTVk60M7cvJBaTPHFzv9zPL74jZDO1LnafIRoX2oRLufwa55cnthO3KFZuPlJmE+niALCHLHT9XwM+HitjWpg/Tg7lcqo915KUHb4BnfbgQH+GZRhYDuA/iI6aPkPM9FJuPNeThAO2OGV8fh8gRlO3jMfJkgHbHDPXxa+Rtg13kmYPLCpsPFbjv1D645wXU534ze8g+XPdE/EI+gX99vEPeIx8s68TH1RxDXQ/kZKmCamYf/l8zbPHxoT08Rz47thcf9pCXE7haB7R86tjexwdt86qB+IiXLh9UG1QX2sXIsb3r+Yfrb+42zO/cg7B76ZKZdfSvjlkbOeqjD77nQZ/zJTZm/6oWH6764OajZKh/z5GPRh+bY1Vbffg8r+V4LrrI2dYvyFfkm9HHVBt0P6XfB9E7JKmP+PxG/iB/LT4OkB1kYaqulVQ+SqqnIXFdz79DXRd9x6tJ7dMYPnR0nYxAxituPkLGq3GujZjHVnp9jJt36l/lkgH1dUTz07LNPHIjgJsMjpsrXN7Xjtt53jyukGPj4qMkcl4/dJTndj7fK91HTJc55sNx8JFifOyzj7bnibHCwQdHyF/XeKU61vdJiI8pCLt3K5mu9x+xIvN37THfD6pE++U4P/FOov20JWR+yZCZhPnUfcLJR+764JBUPpSxLD7skfrgFW4+bNcQ8RE/Uh917jY+iw9e4eCj6xmP+AiL6vEdqQ97ONRH13V93Hw8QjYd67j6kPoYPqplnfioo/+/hkI+dqrllNBcR18fOdqXui9G1XHS539uFRRY
   </data>
  </layer>
- <layer id="4" name="player" width="100" height="45">
+ <layer id="4" name="player" width="100" height="45" visible="0">
   <data encoding="base64" compression="zlib">
    eJztzgENAAAIA6Db2/DGUDdIQAIAAAAAAAAAAAAAAAAAAAAAt3VtD+CHAdLaAH4=
   </data>
  </layer>
- <layer id="5" name="enemy" width="100" height="45">
+ <layer id="5" name="enemy" width="100" height="45" visible="0">
   <data encoding="base64" compression="zlib">
    eJzt2cEOwiAQRVH8cY2Jib9tujA2lbZAoMy8uWdbFx1eGQRSiuN5O37+OnmOvlrzUMjpnalhPR41tfcaj7M8PFGoRaEGJeRhS0keI/sl/pWM7fY31vJQmecqdaggD1ss5pHbFywsvmtvLTVaWzuUqH9z3r4d9TzWvGUDII69/2mLSH0agD9H/QsAZmMPeC3G24aaOzQyuw5jDQBAHPfKdT93trJ33sI5TF+1WSmIWPNX6fzhTgaYa1SfatmXW+iZ3CHPU7JukMGPhflS6uHoXb1gn4KtUT3BU68BAAApfQDs3h9i
   </data>
  </layer>
- <layer id="6" name="item" width="100" height="45">
+ <layer id="6" name="item" width="100" height="45" visible="0">
   <data encoding="base64" compression="zlib">
    eJzt210OgjAMwHH0Bj6b6Kk9GUfx68nEkEhixsbK6GDd/r8XE0Aia2nHiF3Xjsdhfv8rsh+67pHxPh392y+B7RpuGc896H+fb8+1/4/H2fkd4/d8ORzLaymt8/TxQ7Kfxx0/i9x4aI0r0mjdH9AhiYevh+TsHzWT1B9J3XXHP9Tn91JD7xjU3D8sXgv9oyySeCzNs7V5Gao9lmpS6hik3B9b9Q6L9WatkuuVRjxKm3fElByPkNQ4WYsNsESL/aQmc/XJ3UesYRn5Wx9Lz5MA2uN7R458eOYugyTvx2MsrglZRT0CAAApWEurE3Hdx0c4J7/ybAvsKtdaRcq7jBLef8zVpCdrDVlJ+gYxaAtzuDDpPAuokUZtoL4gRd9tlzvk6JTvv/iMEzD1BbnPNEA=
   </data>
