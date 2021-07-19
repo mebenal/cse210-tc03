@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.5" tiledversion="1.7.0" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="10" nextobjectid="1">
  <tileset firstgid="1" source="../tilesets/overworld.tsx"/>
- <tileset firstgid="379" source="../tilesets/players.tsx"/>
+ <tileset firstgid="379" source="../tilesets/actors.tsx"/>
  <tileset firstgid="499" source="../tilesets/weapons.tsx"/>
  <layer id="3" name="background" width="30" height="30">
   <data encoding="base64" compression="zlib">
@@ -30,7 +30,7 @@
  </layer>
  <layer id="9" name="item" width="30" height="30">
   <data encoding="base64" compression="zlib">
-   eJztz8EJACAMQ9HWNdx/wjqAiAdL8doUNA+CN7+KEOXprfoFNYae0w/ZNt3Lbvv7zZ2oroUhuwuiGbuov/rubS92iYiIfjMBp38w4A==
+   eJxjYBgF9AZiTANjr9UA2CsNtPMy/a0F2zmQ9n5hhPBBNDKmB4DZ85kRgmltN7L5n5Foetn7GQ3T014QoIed6PbSy6/I9mLDw9HeUTAKRsEoGAWjYKQBAIB1NVM=
   </data>
  </layer>
  <layer id="5" name="foreground" width="30" height="30">

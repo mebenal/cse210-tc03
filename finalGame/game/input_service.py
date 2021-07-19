@@ -1,5 +1,5 @@
 from game import constants
-from game.player import Player
+from game.actor_player import Player
 
 import arcade
 
@@ -43,3 +43,4 @@ class InputService:
     player.set_item_switch(arcade.key.E in self._keys)
     player.set_item_drop(arcade.key.Q in self._keys)
     player.set_attack(arcade.key.SPACE in self._keys)
+    player.set_use_health(arcade.key.F in self._keys)

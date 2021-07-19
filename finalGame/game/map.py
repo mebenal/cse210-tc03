@@ -1,7 +1,9 @@
+from typing import Union
+from pytiled_parser.objects import TileSet
 from game import constants
-from game.constants import MapDict
-from game.player import Player
-from game.enemy import Enemy
+from game.type_map_dict import MapDict
+from game.actor_player import Player
+from game.actor_enemy import Enemy
 from game.item import Item
 
 import os
@@ -25,7 +27,8 @@ class Map:
                      'item'       : [ SpriteList(), False ],
                      'collision'  : [ SpriteList(), True  ],
                      'foreground' : [ SpriteList(), True  ],
-                     'projectile' : [ SpriteList(), False ]}
+                     'projectile' : [ SpriteList(), False ],
+                     'weapons'    : [ SpriteList(), False ]}
     self._set_layers()
 
   def _set_layers(self):
@@ -41,7 +44,9 @@ class Map:
     self.replace_layer('player', [Player(self.get_layer('player')[0])])
     self.replace_layer('enemy', [Enemy(enemy) for enemy in self.get_layer('enemy')])
     self.replace_layer('item', [Item(item) for item in self.get_layer('item')])
-  
+    for item in self._layers['item'][0]:
+      self._layers['weapons'][0].append(item)
+
   def load_next_map(self):
     self._curr_map += 1
     self._set_layers()
@@ -65,4 +70,9 @@ class Map:
     else:
        raise Exception("Error: Sprite list must be same length as layer list.")
   
-
+  def get_tileset(self, tileset_name:str) -> TileSet:
+    tilesets = self._map_list[0].tile_sets
+    for tileset in tilesets:
+      if tilesets[tileset].name == tileset_name:
+        return tilesets[tileset]
+    return None

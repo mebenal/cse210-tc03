@@ -1,5 +1,5 @@
 SCREEN_WIDTH = 1420
-SCREEN_HEIGHT = 900
+SCREEN_HEIGHT = 700
 SCREEN_TITLE = 'Hero Man v0.0.1'
 #1080
 #1920
@@ -15,42 +15,12 @@ PROJECTILE_SPEED = 20
 
 ENEMY_SIGHT = 250
 
+FACE_RIGHT = 1
+FACE_LEFT = 2
+FACE_UP = 3
+FACE_DOWN = 4
+
 TILE_LAYERS = ['background', 'path', 'collision', 'player', 'enemy', 'item', 'foreground']
-DRAW_LAYERS = ['background', 'path', 'collision', 'player', 'enemy', 'item', 'projectile', 'foreground']
+DRAW_LAYERS = ['background', 'path', 'collision', 'player', 'enemy', 'item', 'projectile', 'weapons', 'foreground']
 
-
-from typing import Iterable, TypedDict
-
-class Mouse(TypedDict):
-  x_pos: int
-  y_pos: int
-
-from arcade import SpriteList
-
-class MapDict(TypedDict):
-  background: SpriteList
-  path:       SpriteList
-  player:     SpriteList
-  enemy:      SpriteList
-  item:       SpriteList
-  collision:  SpriteList
-  foreground: SpriteList
-  projectile: SpriteList
-
-
-from game.map import Map
-from game.item import Item
-from game.enemy import Enemy
-from game.player import Player
-from game.projectile import Projectile
-
-from arcade import PhysicsEngineSimple
-
-class Cast(TypedDict, total=False):
-  map: Map
-  player: Player
-  enemies: Iterable[Enemy]
-  items: Iterable[Item]
-  physics_engines: list[PhysicsEngineSimple]
-  mouse: Mouse
-  projectiles: Iterable[Projectile]
+RECTANGLE_ORDER = ['player_weapon_cooldown', 'player_health_cooldown', 'player_health_outline', 'player_health_bar']
