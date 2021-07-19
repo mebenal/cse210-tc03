@@ -3,12 +3,12 @@
  <tileset firstgid="1" source="../tilesets/overworld.tsx"/>
  <tileset firstgid="379" source="../tilesets/actors.tsx"/>
  <tileset firstgid="499" source="../tilesets/weapons.tsx"/>
- <layer id="3" name="background" width="100" height="100" visible="0">
+ <layer id="3" name="background" width="100" height="100">
   <data encoding="base64" compression="zlib">
    eJztmI1N7DAQhCMENfBTA0XA46TXAfQAHDXQBBJFPCqimWfERbJMLiHO7s6svZFGlyOHMzOf7Rx8DsPwKaSLpL8H/Tu8fmTnc68fh/Njx9S1uc/XHO9J+6SHpPMZSfWlrcukkwW9FiqvHzsseNwn3SU9D745rNFj0i7LXV4/drwu/Ozl0Oeot4nz/cz4L8NPFuiuWLTLOsx7zjsu3391+bSgXTHmvvi9kQU6P6Py/krljMY+p/aYfLyv948TjNA5PWnsr5zXaziEZJXP63wfm/sOhPbcusae8/0m1gUHk97XBEsPDB7QGvPeJN0W+gPoKHh86zTputDZAg9LJuierHlM/R/k6hc8gol+7hoFk/aZ9P4s2crN6p7oHpgUPPhkvY8EE34ewQXDA/n9zosYefTMhGm/CiaYPlj+JmITuoPgUdcFixd0Z+j8bEzQvbGwYGGC7s66bwYuwYKPjXceCA6avHrhgeLXE4/aTpjXiuRaY+QhwZNB6K4leEiuMRahO9fmYbVOe+OD9hpM5jth8BBsOLS1s+Biy0SSbTDxwyPYLPcozTb4bOtPa9zgUtcX4p69cZHILd1Nr0ykMmv00zoTzX1Bu59WeEjtz7/Jq91T8FifF80E3bcli61rpGcmWiy2rhGJvrzx0GRhyUTDFxsPy9wW84KZQ+281MwfLOq9e+SB7lyTh9QY2kzQPUvlXjuO5TzpjQUyS7DgydND/63zQPdpNeeYPaI7DRacLKSedUz5vPnV5OEtC7p/LRboLN55tLQuajOh/T4ocGDJFjz48nnzGzy4/MZ+xeVXiwc611oWLJ41eKAzeebRcibP3iVyoX0GD8483vfZlni08uzbmhvtR4oHUxbvPCRYMOaqyY/2osXDMx+0LHgEEy4Wwcsfj2CC7z+YcLPolQu662Djm4cGE/T9PbOQ7gR9/xZYSPWh6WWtZ3SfaB6anqT4eRSaQaieDdqfVj60r9Y8b8nFnpfdnwULpszM3ixZsORm9YVgwZCd2ZtF92yZ2f1pd8+WuRV/vfFAeESxCB48HNA8/gMrDsCH
   </data>
  </layer>
- <layer id="2" name="path" width="100" height="100" visible="0">
+ <layer id="2" name="path" width="100" height="100">
   <data encoding="base64" compression="zlib">
    eJzt3LENhEAMBEBaoYanUf57AGIaoZ7PsIgJILnzwYy0iaOVNnfXtaG/eKMMe+Rij1zskYs9crFHLvYAaM92cvsXbwFt+USG2iUAAAAAAAAAAAAAAAAAHm6MfCO/2kU4TJE5stQuAgAAAAAAAAAAAAAAAAAAAABAen4I5eOHEPAGa+0CADfshCQLYA==
   </data>
