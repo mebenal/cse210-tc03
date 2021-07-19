@@ -36,10 +36,10 @@ class ActionHandleAttack(Action):
       weapon = player.get_item_of_slot('weapon')
       if weapon == None or weapon.get_type() == 'melee':
         nearest = arcade.get_closest_sprite(player, cast['enemies'])
-        if weapon and weapon.get_range() >= nearest[1]:
+        if weapon and nearest and weapon.get_range() >= nearest[1]:
           nearest[0].take_damage(weapon.get_damage())
           sound.play_sound('player_melee_hit')
-        elif 50 >= nearest[1] and not weapon:
+        elif nearest and 50 >= nearest[1] and not weapon:
           nearest[0].take_damage(15)
           sound.play_sound('fist_hit')
         else:
@@ -64,7 +64,7 @@ class ActionHandleAttack(Action):
             sound.play_sound('swing')
         elif weapon.get_type() == 'ranged':
           position_to_attack = [player.position[1] - enemy.position[1], player.position[0] - enemy.position[0]]
-          self.create_projectile(cast['projectiles'], enemy, weapon, position_to_attack, 'player')
+          self.create_projectile(cast['projectiles'], enemy, weapon, position_to_attack, 'player', cast['item_textures'])
           sound.play_sound('bow')
         enemy.reset_item_attack_cooldown()
 
