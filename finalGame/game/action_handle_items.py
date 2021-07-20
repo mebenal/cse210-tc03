@@ -26,16 +26,17 @@ class ActionHandleItems(Action):
     player = cast['player']
     items = cast['items']
   
-    item_collisions = arcade.check_for_collision_with_list(player, cast['map'].get_layer('item'))
-    if player.get_item_switch() and len(item_collisions) != 0 and player.can_switch_item():
-      if item_collisions[0].get_slot() == 'weapon':
-        switch_dict = self.get_possible_switch(player, item_collisions[0])
-        self.switch_item(player, items, switch_dict)
-        player.reset_item_switch_cooldown()
-      elif item_collisions[0].get_type() == 'health':
-        player.add_item(item_collisions[0])
-        items.remove(item_collisions[0])
-        cast['map'].get_layer('weapons').remove(item_collisions[0])
+    if player.get_item_switch() and player.can_switch_item():
+      item_collisions = arcade.check_for_collision_with_list(player, cast['map'].get_layer('item'))
+      if len(item_collisions) != 0:
+        if item_collisions[0].get_slot() == 'weapon':
+          switch_dict = self.get_possible_switch(player, item_collisions[0])
+          self.switch_item(player, items, switch_dict)
+          player.reset_item_switch_cooldown()
+        elif item_collisions[0].get_type() == 'health':
+          player.add_item(item_collisions[0])
+          items.remove(item_collisions[0])
+          cast['map'].get_layer('weapons').remove(item_collisions[0])
     elif player.get_item_drop() and player.can_switch_item():
       self.drop_item(player, items)
       player.reset_item_switch_cooldown()
@@ -52,19 +53,21 @@ class ActionHandleItems(Action):
       weapon.position = (x, y)
       
 
-
+    
     for enemy in cast['enemies']:
-      item_collisions = arcade.check_for_collision_with_list(enemy, cast['map'].get_layer('item'))
-      if len(item_collisions) != 0 and enemy.can_switch_item():
-        switch_dict = self.get_possible_switch(enemy, item_collisions[0])
-        switch = False
-        if switch_dict['sprite_item'] == None:
-          switch = True
-        elif switch_dict['sprite_item'].get_damage() < switch_dict['ground_item'].get_damage():
-          switch = True
-        if switch:
-          self.switch_item(enemy, items, switch_dict)
-          enemy.reset_item_switch_cooldown()
+      if frame_count % 5 == 0:
+        item_collisions = arcade.check_for_collision_with_list(enemy, cast['map'].get_layer('item'))
+        if len(item_collisions) != 0 and enemy.can_switch_item():
+          switch_dict = self.get_possible_switch(enemy, item_collisions[0])
+          switch = False
+          if switch_dict['sprite_item'] == None:
+            switch = True
+          elif switch_dict['sprite_item'].get_damage() < switch_dict['ground_item'].get_damage():
+            switch = True
+          if switch:
+            self.switch_item(enemy, items, switch_dict)
+            enemy.reset_item_switch_cooldown()
+      
       if enemy.get_health() <= 0:
         self.drop_item(enemy, items)
       weapon = enemy.get_item_of_slot('weapon')

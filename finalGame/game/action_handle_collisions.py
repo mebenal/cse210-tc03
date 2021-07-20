@@ -1,6 +1,6 @@
 
 import arcade
-from arcade.sprite import Sprite
+from arcade.sprite import AnimatedTimeBasedSprite, Sprite
 
 from game import constants
 from game.action import Action
@@ -39,6 +39,10 @@ class ActionHandleCollisions(Action):
         if len(collision) > 0:
           projectile.kill(collision[0])
 
-    cast['map'].get_layer('collision').update_animation()
-    cast['map'].get_layer('background').update_animation()
+    for sprite in cast['map'].get_layer('collision'):
+      if isinstance(sprite, AnimatedTimeBasedSprite):
+        sprite.update_animation()
+    for sprite in cast['map'].get_layer('background'):
+      if isinstance(sprite, AnimatedTimeBasedSprite):
+        sprite.update_animation()
       

@@ -33,7 +33,8 @@ class ActionUpdateCast(Action):
     for enemy in cast['enemies']:
       enemy.update(cast['sound'])
     cast['player'].update_animation()
-    cast['enemies'].update_animation()
+    for enemy in cast['enemies']:
+      enemy.update_animation()
     cast['projectiles'].update()
     cast['ui'].update(cast)
     cast['sound'].update()

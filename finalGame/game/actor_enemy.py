@@ -24,13 +24,17 @@ class Enemy(ActorWalkingAnimated):
 
   def update_movement(self, frame_count:int, collision:SpriteList, position:list[float,float]):
     past_position = self.position
-    
+    moved = False
+
     if self._move_behavior == 1:
       self.move_towards_point(position)
+      moved = True
     elif self._move_behavior == 2:
       self.move_away_point(position)
+      moved = True
     elif self._move_behavior == 0 and frame_count % 60 == 0:
       self.move_random()
+      moved = True
     elif self._move_behavior == 0 and frame_count % 20 != 0:
       pass
     else:
@@ -38,10 +42,11 @@ class Enemy(ActorWalkingAnimated):
     
     self.position = [self._position[0] + self.change_x, self._position[1] + self.change_y]
     self.angle += self.change_angle
-    
-    if len(arcade.check_for_collision_with_list(self,collision)) > 0:
-      self.position = past_position
-      self.change_x = self.change_y = 0
+
+    if moved:
+      if len(arcade.check_for_collision_with_list(self, collision)) != 0:
+        self.position = past_position
+        self.change_x = self.change_y = 0
 
   def move_random(self):
     angle = random.randint(0, 359) * math.pi / 180
