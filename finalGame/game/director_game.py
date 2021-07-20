@@ -32,7 +32,7 @@ class DirectorGame(arcade.View):
     for enemy in self._cast['enemies']:
       enemy.set_texures(self._cast['animation_textures'])
     self._cast['player'].set_texures(self._cast['animation_textures'])
-    self.load_next_map()
+  
 
   def on_draw(self):
     '''

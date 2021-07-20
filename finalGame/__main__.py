@@ -27,7 +27,7 @@ from game.ui import UI
 
 
 def main():
-  # create the cast {key: tag, value: list}
+  # create the cast {key: tag, value: list} 
 
   casts: Casts = {}
   game_cast: GameCast = {}
