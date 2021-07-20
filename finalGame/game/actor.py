@@ -16,6 +16,7 @@ class Actor(Sprite):
       self._health = int(sprite.properties['health'])
     except:
       self._health = 100
+    self._max_health = self._health
     try:
       self._id = int(sprite.properties['id'])
     except:
@@ -25,6 +26,9 @@ class Actor(Sprite):
     self._item_switch_cooldown = 0
     self._item_attack_cooldown = 0
     self._health_use_cooldown = 0
+
+  def get_max_health(self) -> int:
+    return self._max_health
 
   def get_health(self) -> int:
     return self._health

@@ -44,3 +44,4 @@ class InputService:
     player.set_item_drop(arcade.key.Q in self._keys)
     player.set_attack(arcade.key.SPACE in self._keys)
     player.set_use_health(arcade.key.F in self._keys)
+    player.set_exit_start_menu(arcade.key.ENTER in self._keys)

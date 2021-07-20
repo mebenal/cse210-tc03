@@ -17,6 +17,13 @@ class Player(ActorWalkingAnimated):
     self._item_drop_held = None
     self._attack_held = None
     self._use_health_held = None
+    self._exit_start_menu_held = None
+
+  def set_exit_start_menu(self, key_pressed:bool):
+    self._exit_start_menu_held = key_pressed
+
+  def get_exit_start_menu(self) -> bool:
+    return self._exit_start_menu_held
 
   def set_item_switch(self, key_pressed:bool):
     self._item_switch_held = key_pressed

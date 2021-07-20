@@ -11,7 +11,7 @@ from game.actor_player import Player
 from game.type_text import Text
 
 
-class UI:
+class UIGame:
   """Points earned. The responsibility of Score is to keep track of the player's points.
 
   Stereotype:
@@ -29,10 +29,14 @@ class UI:
     """
     self._text_elements: TextDict = { 'hp' : { 'string'   : 'HP:',
                                                'color'    : arcade.color.BLACK,
-                                               'font_size':12 },
+                                               'font_size': 12,
+                                               'start_x'  : None,
+                                               'start_y'  : None},
                                       'health_items' : { 'string'    : '',
                                                          'color'     : arcade.color.BLACK,
-                                                         'font_size' : 12} }
+                                                         'font_size' : 12,
+                                                         'start_x'  : None,
+                                                         'start_y'  : None} }
     self._sprite_elements: SpriteDict = {'player_weapon':None,
                                          'player_health':None}
     self._rectangle_elements: RectangleDict = { 'player_weapon_cooldown' : None,

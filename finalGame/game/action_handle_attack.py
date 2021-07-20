@@ -7,7 +7,7 @@ from arcade import SpriteList
 from game import constants
 from game.action import Action
 from game.actor import Actor
-from game.type_game_cast import GameCast
+from game.type_cast import Cast
 from game.director_game import DirectorGame
 from game.item import Item
 from game.projectile import Projectile
@@ -22,7 +22,7 @@ class ActionHandleAttack(Action):
   def __init__(self):
     return
 
-  def execute(self, director:DirectorGame, cast:GameCast, frame_count:int):
+  def execute(self, director:DirectorGame, cast:Cast, frame_count:int):
     """Executes the action using the given actors.
 
     Args:
@@ -51,7 +51,7 @@ class ActionHandleAttack(Action):
     
     for enemy in cast['enemies']:
       distance = enemy.get_distance_to_player()
-      if distance < constants.ENEMY_SIGHT and enemy.can_attack():
+      if (distance < constants.ENEMY_SIGHT or enemy.get_health() < enemy.get_max_health()) and enemy.can_attack():
         weapon = enemy.get_item_of_slot('weapon')
         if weapon == None or weapon.get_type() == 'melee':
           if weapon and weapon.get_range() >= distance:
@@ -60,8 +60,6 @@ class ActionHandleAttack(Action):
           elif 50 >= distance and not weapon:
             player.take_damage(15)
             sound.play_sound('fist_hit')
-          else:
-            sound.play_sound('swing')
         elif weapon.get_type() == 'ranged':
           position_to_attack = [player.position[1] - enemy.position[1], player.position[0] - enemy.position[0]]
           self.create_projectile(cast['projectiles'], enemy, weapon, position_to_attack, 'player', cast['item_textures'])

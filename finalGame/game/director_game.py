@@ -1,6 +1,7 @@
+from game.ui_game import UIGame
 from game.library_animation_textures import LibraryAnimationTextures
 from game import constants
-from game.type_game_cast import GameCast
+from game.type_cast import Cast
 from game.input_service import InputService
 
 import arcade
@@ -25,8 +26,8 @@ class DirectorGame(arcade.View):
     self.fps = None
     #'''
 
-  def setup(self, cast:GameCast, script:list, input_service:InputService):
-    self._cast:GameCast = cast
+  def setup(self, cast:Cast, script:list, input_service:InputService):
+    self._cast:Cast = cast
     self._script:list = script
     self._input_service:InputService = input_service
     for enemy in self._cast['enemies']:
@@ -117,3 +118,6 @@ class DirectorGame(arcade.View):
     for enemy in self._cast['enemies']:
       enemy.set_texures(self._cast['animation_textures'])
     self._cast['player'].set_texures(self._cast['animation_textures'])
+
+  def get_ui(self) -> UIGame:
+    return self._cast['ui'][1]

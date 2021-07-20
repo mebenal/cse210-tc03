@@ -1,4 +1,4 @@
-from game.ui import UI
+from game.ui_game import UIGame
 from game import constants
 from game.type_map_dict import MapDict
 
@@ -42,14 +42,17 @@ class OutputService:
     for name in drawOrder:
       self.draw_layer(layers[name])
 
-  def draw_ui(self, ui:UI):
+  def draw_ui(self, ui:UIGame):
+    rectangles = ui.get_rectangle_elements()
+    for i in constants.RECTANGLE_ORDER:
+      try:
+        rectangles[i].draw()
+      except:
+        pass
     for i, (key, text) in enumerate(ui.get_text_elements().items()):
-      if text:
+      if text['start_x']:
         arcade.draw_text(text['string'], text['start_x'], text['start_y'], text['color'], text['font_size'])
     for i, (key, sprite) in enumerate(ui.get_sprite_elements().items()):
       if sprite:
         sprite.draw()
-    rectangles = ui.get_rectangle_elements()
-    for i in constants.RECTANGLE_ORDER:
-      if rectangles[i]:
-        rectangles[i].draw()
+    

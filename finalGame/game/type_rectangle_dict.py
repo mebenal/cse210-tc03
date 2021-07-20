@@ -6,4 +6,5 @@ class RectangleDict(TypedDict):
   player_health_outline : Shape
   player_health_bar: Shape
   player_health_cooldown: Shape
+  background: Shape
   

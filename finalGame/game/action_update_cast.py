@@ -1,6 +1,6 @@
 from game import constants
 from game.action import Action
-from game.type_game_cast import GameCast
+from game.type_cast import Cast
 from game.director_game import DirectorGame
 
 
@@ -23,7 +23,7 @@ class ActionUpdateCast(Action):
     """
     return
 
-  def execute(self, director:DirectorGame, cast:GameCast, frame_count:int):
+  def execute(self, director:DirectorGame, cast:Cast, frame_count:int):
     """Executes the action using the given actors.
 
     Args:
@@ -36,5 +36,5 @@ class ActionUpdateCast(Action):
     for enemy in cast['enemies']:
       enemy.update_animation()
     cast['projectiles'].update()
-    cast['ui'].update(cast)
+    cast['ui'][1].update(cast)
     cast['sound'].update()
